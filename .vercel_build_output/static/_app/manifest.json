@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-81e63259.js",
+    "file": "start-0b35145e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -77,47 +77,46 @@
     ]
   },
   "src/routes/docs/components/button.md": {
-    "file": "pages/docs/components/button.md-354299a0.js",
+    "file": "pages/docs/components/button.md-30a22c92.js",
     "src": "src/routes/docs/components/button.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6428261d.js",
-      "_overview-3a1476b2.js",
-      "_Button-74b64f58.js",
-      "_Section-085170f0.js"
+      "_Section-085170f0.js",
+      "_Button-74b64f58.js"
     ]
   },
   "src/routes/docs/overview/getting-started.md": {
-    "file": "pages/docs/overview/getting-started.md-a545e23f.js",
+    "file": "pages/docs/overview/getting-started.md-8233729d.js",
     "src": "src/routes/docs/overview/getting-started.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6428261d.js",
-      "_overview-3a1476b2.js",
+      "_overview-07f713a6.js",
       "_Section-085170f0.js"
     ]
   },
   "src/routes/docs/overview/introduction.md": {
-    "file": "pages/docs/overview/introduction.md-a4794281.js",
+    "file": "pages/docs/overview/introduction.md-25ceff9c.js",
     "src": "src/routes/docs/overview/introduction.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6428261d.js",
-      "_overview-3a1476b2.js",
+      "_overview-07f713a6.js",
       "_Section-085170f0.js"
     ]
   },
   "src/routes/docs/overview/styling.md": {
-    "file": "pages/docs/overview/styling.md-4801492d.js",
+    "file": "pages/docs/overview/styling.md-daea4927.js",
     "src": "src/routes/docs/overview/styling.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6428261d.js",
-      "_overview-3a1476b2.js",
+      "_overview-07f713a6.js",
       "_Section-085170f0.js"
     ]
   },
@@ -145,8 +144,8 @@
       "_vendor-6428261d.js"
     ]
   },
-  "_overview-3a1476b2.js": {
-    "file": "chunks/overview-3a1476b2.js",
+  "_overview-07f713a6.js": {
+    "file": "chunks/overview-07f713a6.js",
     "imports": [
       "_vendor-6428261d.js",
       "_Section-085170f0.js"

@@ -1,5 +1,6 @@
 ---
 title: Button Component
+layout: component
 ---
 
 <script>

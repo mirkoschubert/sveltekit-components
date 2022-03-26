@@ -1,7 +1,13 @@
 <script>
+  import { Section } from '$lib/components'
+
   export let title
+  export let layout
+
+  $: console.log('Layout:', layout)
 </script>
 
-<h1>{title}</h1>
-
-<slot />
+<Section>
+  <h1>{title}</h1>
+  <slot />
+</Section>

@@ -6215,16 +6215,28 @@ var init__5 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/overview-df9cdce5.js
-var Overview;
-var init_overview_df9cdce5 = __esm({
-  ".svelte-kit/output/server/chunks/overview-df9cdce5.js"() {
+// .svelte-kit/output/server/entries/pages/docs/components/button.md.js
+var button_md_exports = {};
+__export(button_md_exports, {
+  default: () => Button_1,
+  metadata: () => metadata
+});
+var Component, metadata, Button_1;
+var init_button_md = __esm({
+  ".svelte-kit/output/server/entries/pages/docs/components/button.md.js"() {
     init_index_a4e7e00d();
     init_Section_e530fb45();
-    Overview = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+    init_Button_33b9d3e4();
+    Component = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { title } = $$props;
+      let { layout } = $$props;
       if ($$props.title === void 0 && $$bindings.title && title !== void 0)
         $$bindings.title(title);
+      if ($$props.layout === void 0 && $$bindings.layout && layout !== void 0)
+        $$bindings.layout(layout);
+      {
+        console.log("Layout:", layout);
+      }
       return `${validate_component(Section, "Section").$$render($$result, {}, {}, {
         default: () => {
           return `<h1>${escape(title)}</h1>
@@ -6232,25 +6244,12 @@ var init_overview_df9cdce5 = __esm({
         }
       })}`;
     });
-  }
-});
-
-// .svelte-kit/output/server/entries/pages/docs/components/button.md.js
-var button_md_exports = {};
-__export(button_md_exports, {
-  default: () => Button_1,
-  metadata: () => metadata
-});
-var metadata, Button_1;
-var init_button_md = __esm({
-  ".svelte-kit/output/server/entries/pages/docs/components/button.md.js"() {
-    init_index_a4e7e00d();
-    init_overview_df9cdce5();
-    init_Button_33b9d3e4();
-    init_Section_e530fb45();
-    metadata = { "title": "Button Component" };
+    metadata = {
+      "title": "Button Component",
+      "layout": "component"
+    };
     Button_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(Overview, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata), {}, {
+      return `${validate_component(Component, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata), {}, {
         default: () => {
           return `<p>Excepteur occaecat est velit veniam eu occaecat culpa. Ut fugiat ad Lorem pariatur pariatur ea est deserunt exercitation. Occaecat fugiat qui aute nulla dolore.</p>
 <h3>Default Button</h3>
@@ -6319,9 +6318,35 @@ var entry6, js6, css6;
 var init__6 = __esm({
   ".svelte-kit/output/server/nodes/5.js"() {
     init_button_md();
-    entry6 = "pages/docs/components/button.md-354299a0.js";
-    js6 = ["pages/docs/components/button.md-354299a0.js", "chunks/vendor-6428261d.js", "chunks/overview-3a1476b2.js", "chunks/Section-085170f0.js", "chunks/Button-74b64f58.js"];
-    css6 = ["assets/overview-944ff75d.css"];
+    entry6 = "pages/docs/components/button.md-30a22c92.js";
+    js6 = ["pages/docs/components/button.md-30a22c92.js", "chunks/vendor-6428261d.js", "chunks/Section-085170f0.js", "chunks/Button-74b64f58.js"];
+    css6 = [];
+  }
+});
+
+// .svelte-kit/output/server/chunks/overview-50519e18.js
+var Overview;
+var init_overview_50519e18 = __esm({
+  ".svelte-kit/output/server/chunks/overview-50519e18.js"() {
+    init_index_a4e7e00d();
+    init_Section_e530fb45();
+    Overview = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { title } = $$props;
+      let { layout } = $$props;
+      if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+        $$bindings.title(title);
+      if ($$props.layout === void 0 && $$bindings.layout && layout !== void 0)
+        $$bindings.layout(layout);
+      {
+        console.log("Layout:", layout);
+      }
+      return `${validate_component(Section, "Section").$$render($$result, {}, {}, {
+        default: () => {
+          return `<h1>${escape(title)}</h1>
+  ${slots.default ? slots.default({}) : ``}`;
+        }
+      })}`;
+    });
   }
 });
 
@@ -6335,9 +6360,12 @@ var metadata2, Getting_started;
 var init_getting_started_md = __esm({
   ".svelte-kit/output/server/entries/pages/docs/overview/getting-started.md.js"() {
     init_index_a4e7e00d();
-    init_overview_df9cdce5();
+    init_overview_50519e18();
     init_Section_e530fb45();
-    metadata2 = { "title": "Getting Started" };
+    metadata2 = {
+      "title": "Getting Started",
+      "layout": "overview"
+    };
     Getting_started = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(Overview, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata2), {}, {
         default: () => {
@@ -6365,8 +6393,8 @@ var entry7, js7, css7;
 var init__7 = __esm({
   ".svelte-kit/output/server/nodes/6.js"() {
     init_getting_started_md();
-    entry7 = "pages/docs/overview/getting-started.md-a545e23f.js";
-    js7 = ["pages/docs/overview/getting-started.md-a545e23f.js", "chunks/vendor-6428261d.js", "chunks/overview-3a1476b2.js", "chunks/Section-085170f0.js"];
+    entry7 = "pages/docs/overview/getting-started.md-8233729d.js";
+    js7 = ["pages/docs/overview/getting-started.md-8233729d.js", "chunks/vendor-6428261d.js", "chunks/overview-07f713a6.js", "chunks/Section-085170f0.js"];
     css7 = ["assets/overview-944ff75d.css"];
   }
 });
@@ -6381,7 +6409,7 @@ var metadata3, Introduction;
 var init_introduction_md = __esm({
   ".svelte-kit/output/server/entries/pages/docs/overview/introduction.md.js"() {
     init_index_a4e7e00d();
-    init_overview_df9cdce5();
+    init_overview_50519e18();
     init_Section_e530fb45();
     metadata3 = {
       "title": "Introduction",
@@ -6415,8 +6443,8 @@ var entry8, js8, css8;
 var init__8 = __esm({
   ".svelte-kit/output/server/nodes/7.js"() {
     init_introduction_md();
-    entry8 = "pages/docs/overview/introduction.md-a4794281.js";
-    js8 = ["pages/docs/overview/introduction.md-a4794281.js", "chunks/vendor-6428261d.js", "chunks/overview-3a1476b2.js", "chunks/Section-085170f0.js"];
+    entry8 = "pages/docs/overview/introduction.md-25ceff9c.js";
+    js8 = ["pages/docs/overview/introduction.md-25ceff9c.js", "chunks/vendor-6428261d.js", "chunks/overview-07f713a6.js", "chunks/Section-085170f0.js"];
     css8 = ["assets/overview-944ff75d.css"];
   }
 });
@@ -6431,9 +6459,9 @@ var metadata4, Styling;
 var init_styling_md = __esm({
   ".svelte-kit/output/server/entries/pages/docs/overview/styling.md.js"() {
     init_index_a4e7e00d();
-    init_overview_df9cdce5();
+    init_overview_50519e18();
     init_Section_e530fb45();
-    metadata4 = { "title": "Styling" };
+    metadata4 = { "title": "Styling", "layout": "overview" };
     Styling = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(Overview, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata4), {}, {
         default: () => {
@@ -6457,8 +6485,8 @@ var entry9, js9, css9;
 var init__9 = __esm({
   ".svelte-kit/output/server/nodes/8.js"() {
     init_styling_md();
-    entry9 = "pages/docs/overview/styling.md-4801492d.js";
-    js9 = ["pages/docs/overview/styling.md-4801492d.js", "chunks/vendor-6428261d.js", "chunks/overview-3a1476b2.js", "chunks/Section-085170f0.js"];
+    entry9 = "pages/docs/overview/styling.md-daea4927.js";
+    js9 = ["pages/docs/overview/styling.md-daea4927.js", "chunks/vendor-6428261d.js", "chunks/overview-07f713a6.js", "chunks/Section-085170f0.js"];
     css9 = ["assets/overview-944ff75d.css"];
   }
 });
@@ -8488,7 +8516,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<meta name="description" content="" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<body>\n		<div id="app">' + body + "</div>\n	</body>\n</html>\n";
+var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<meta name="description" content="" />\n		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />\n\n    <link rel="icon" href="/assets/logo/favicon.png" />\n		<link rel="shortcut icon" type="image/svg" href="/assets/logo/favicon.svg" />\n		<link rel="shortcut icon" type="image/png" href="/assets/logo/favicon.png" />\n\n    <meta name="application-name" content="SvelteKit Components" />\n		<meta name="msapplication-TileColor" content="#20bf6b" />\n\n    <meta name="og:site_name" content="SvelteKit Components" />\n\n    <!-- Apple Metatags-->\n		<meta name="apple-mobile-web-app-capable" content="yes" />\n		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />\n		<meta name="apple-touch-fullscreen" content="yes" />\n		<meta name="apple-mobile-web-app-title" content="SvelteKit Components" />\n		<link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png" />\n		<link rel="mask-icon" href="/assets/logo/safari-pinned-tab.svg" color="#20bf6b" />\n		<meta name="theme-color" content="#20bf6b" />\n		<meta name="apple-mobile-web-app-orientations" content="portrait" />\n		<meta name="apple-mobile-web-app-status-bar-style" content="black" />\n\n    <!-- SvelteKit tags -->\n		<link rel="manifest" href="/manifest.json" />\n\n		' + head + '\n	</head>\n	<body>\n		<div id="app">' + body + "</div>\n	</body>\n</html>\n";
 var read = null;
 set_paths({ "base": "", "assets": "" });
 var Server = class {
@@ -8518,7 +8546,7 @@ var Server = class {
       prerender: true,
       read,
       root: Root,
-      service_worker: null,
+      service_worker: base + "/service-worker.js",
       router: true,
       template,
       template_contains_nonce: false,
@@ -8545,10 +8573,10 @@ var Server = class {
 // .svelte-kit/vercel-tmp/manifest.js
 var manifest = {
   appDir: "_app",
-  assets: /* @__PURE__ */ new Set(["favicon.png"]),
-  mimeTypes: { ".png": "image/png" },
+  assets: /* @__PURE__ */ new Set(["assets/logo/android-chrome-192x192.png", "assets/logo/android-chrome-256x256.png", "assets/logo/android-launchericon-144-144.png", "assets/logo/android-launchericon-192-192.png", "assets/logo/android-launchericon-48-48.png", "assets/logo/android-launchericon-512-512.png", "assets/logo/android-launchericon-72-72.png", "assets/logo/android-launchericon-96-96.png", "assets/logo/apple-touch-icon-120x120.png", "assets/logo/apple-touch-icon-152x152.png", "assets/logo/apple-touch-icon-180x180.png", "assets/logo/apple-touch-icon-60x60.png", "assets/logo/apple-touch-icon-76x76.png", "assets/logo/apple-touch-icon.png", "assets/logo/browserconfig.xml", "assets/logo/favicon-16x16.png", "assets/logo/favicon-32x32.png", "assets/logo/favicon.ico", "assets/logo/favicon.png", "assets/logo/favicon.svg", "assets/logo/logo-circle.png", "assets/logo/logo-circle.svg", "assets/logo/logo-circle@2x.png", "assets/logo/logo.png", "assets/logo/logo.svg", "assets/logo/logo@2x.png", "assets/logo/mstile-150x150.png", "assets/logo/safari-pinned-tab.svg", "favicon.ico", "favicon.png", "manifest.json", "service-worker.js"]),
+  mimeTypes: { ".png": "image/png", ".xml": "application/xml", ".ico": "image/vnd.microsoft.icon", ".svg": "image/svg+xml", ".json": "application/json" },
   _: {
-    entry: { "file": "start-81e63259.js", "js": ["start-81e63259.js", "chunks/vendor-6428261d.js", "chunks/singletons-d1fb5791.js"], "css": [] },
+    entry: { "file": "start-0b35145e.js", "js": ["start-0b35145e.js", "chunks/vendor-6428261d.js", "chunks/singletons-d1fb5791.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

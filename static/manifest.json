@@ -1,0 +1,49 @@
+{
+	"background_color": "#131421",
+	"theme_color": "#20bf6b",
+	"name": "SvelteKit Components",
+	"short_name": "SK Components",
+	"display": "standalone",
+	"description": "An opinionated UI Kit for Sveltekit [WIP]",
+	"start_url": "/",
+	"shortcuts": [
+		{
+			"name": "Home",
+			"url": "/"
+		},
+		{
+			"name": "Introduction",
+			"url": "/docs/overview/introduction"
+		},
+		{
+			"name": "Getting Started",
+			"url": "/docs/overview/getting-started"
+		}
+	],
+	"icons": [
+    {
+      "src": "assets/logo/android-launchericon-512-512.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "assets/logo/android-launchericon-192-192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/logo/android-launchericon-144-144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "assets/logo/android-launchericon-96-96.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/logo/android-launchericon-72-72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "assets/logo/android-launchericon-48-48.png",
+      "sizes": "48x48"
+    }
+  ]
+}

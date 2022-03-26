@@ -1,5 +1,6 @@
 ---
 title: Styling
+layout: overview
 ---
 
 ## Base Styles

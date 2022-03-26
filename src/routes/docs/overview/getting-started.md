@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+layout: overview
 ---
 
 ## Install the package
