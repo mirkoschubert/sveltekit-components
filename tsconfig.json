@@ -1,3 +1,37 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json"
+  "extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"types": ["node", "svelte"],
+		"moduleResolution": "node",
+		"module": "es2020",
+		"lib": ["es2020", "DOM"],
+		"target": "es2019",
+		"importsNotUsedAsValues": "error",
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"allowJs": true,
+		"checkJs": true,
+		"paths": {
+			"$types": ["src/types"],
+			"$types/*": ["src/types/*"],
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"],
+			"$assets": ["src/assets"],
+			"$assets/*": ["src/assets/*"],
+			"$sass": ["src/lib/sass"],
+			"$sass/vars": ["src/lib/sass/base/_variables.sass"],
+			"$sass/*": ["src/lib/sass/*"],
+      "$components": ["src/lib/components"],
+      "$components/*": ["src/lib/components/*"],
+			"$routes": ["src/routes"],
+			"$routes/*": ["src/routes/*"]
+		}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.svelte"],
+	"exclude": ["src/**/*.spec.ts", "src/**/*.jsx"]
 }

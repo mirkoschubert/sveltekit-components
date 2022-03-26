@@ -1,0 +1,13 @@
+
+@mixin tablet
+  @media (min-width: #{$tablet-width + 1px})
+    @content
+
+@mixin landscape
+  @media (min-width: #{$landscape-width + 1px})
+    @content
+
+
+@mixin desktop
+  @media (min-width: #{$desktop-width + 1px})
+    @content
