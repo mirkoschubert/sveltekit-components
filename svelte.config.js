@@ -5,7 +5,9 @@ import cssnano from 'cssnano'
 import { resolve } from 'path'
 import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
+import slug from 'remark-slug'
 import { directives } from './directives.config.js'
+import { plugin, linkify } from './remark.plugins.js'
 
 const rootDomain = process.env["VITE_DOMAIN"] // or your server IP for dev
 
@@ -30,6 +32,7 @@ const config = {
     }),
     mdsvex({
       extensions: ['.md', '.svx'],
+      remarkPlugins: [plugin, slug, linkify],
       layout: {
         overview: 'src/lib/layouts/overview.svelte',
         component: 'src/lib/layouts/component.svelte',

@@ -1,8 +1,8 @@
 .menu
   max-height: calc(100% - var(--header-size))
-  background-color: #{$gray-1}
+  background-color: var(--bg-menu)
   //border: 1px solid #{$gray-4}
-  z-index: 100
+  z-index: 200
   width: 100%
   top: var(--header-size)
   bottom: 0
@@ -18,7 +18,7 @@
   justify-content: flex-start
 
   @include tablet
-    background-color: #{$gray-2}
+    //background-color: #{$gray-2}
     padding: 1rem 0
     width: 16rem
     display: flex
@@ -41,7 +41,7 @@
         margin: 0 .5rem
 
         .label
-          color: var(--text-color-dark)
+          color: var(--text-dark)
           padding: .25rem 0 .25rem 1rem
           //font-size: .875rem
           text-transform: uppercase
@@ -62,25 +62,26 @@
             padding: .3125rem 0 .3125rem 2rem
             display: flex
             height: 100%
-            color: var(--text-color)
+            color: var(--text)
 
             &:hover
-              background-color: #{$gray-4}
+              background-color: var(--bg)
 
           &[data-active] a
-            background-color: #{$green-dark}
-            color: #{$gray-0}
+            background-color: var(--bg-card)
+            color: rgba(var(--green-light), .8)
+            border: 1px solid rgba(var(--green-light), .8)
 
           &[data-disabled]
-            color: var(--text-color-dark)
+            color: var(--text-disabled)
 
           .tag
             font-size: .75rem
             padding: 0 .3rem
-            background-color: #{$gray-4}
+            background-color: var(--bg-code)
             border-radius: .125rem
             margin-left: .5rem 
-            color: #{$gray-6}
+            color: var(--accent)
 
   .btn-close
     position: absolute
@@ -118,7 +119,7 @@
   color: #{$white}
   width: 3rem
   height: 3rem
-  background-color: #{$gray-4}
+  background-color: $dark3
   border: none
   border-radius: 50%
   //opacity: .8

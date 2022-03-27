@@ -3,8 +3,11 @@ body
   font-weight: 400
   font-size: 100%
   line-height: 1.8
-  background-color: var(--background-color)
-  color: var(--text-color)
+  background-color: var(--bg)
+  color: var(--text)
+
+  &.framed
+    background-color: var(--bg-preview)
 
 h1,
 h2,
@@ -14,30 +17,29 @@ h5,
 h6
   font-family: 'Source Sans Pro', sans-serif
   font-weight: 600
-  color: var(--text-color)
+  color: var(--text-headline)
 
 p
-  color: var(--text-color-alt)
+  color: var(--text)
 
 a
   text-decoration: none
-  color: var(--accent-color)
+  color: var(--accent)
 
   &:hover
-    color: var(--accent-color-light)
+    color: var(--accent-light)
 
 b,
 strong
   font-weight: 600
 
 pre, code, samp
-  font-family: 'Source Code Pro', monospace
+  font-family: 'Fira Mono', monospace
   font-weight: 400
   font-size: .875rem
 
-code.hljs
-  background: var(--background-color)
-  color: var(--text-color-alt)
-
-.code-snippet pre code.hljs
-  padding: 2rem
+p > code
+  background-color: var(--bg-code)
+  color: var(--accent)
+  padding: .125rem .25rem
+  border-radius: .125rem

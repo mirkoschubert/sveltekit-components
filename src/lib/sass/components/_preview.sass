@@ -1,0 +1,33 @@
+.preview
+  margin-bottom: var(--v-spacing)
+
+  .framed-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: .5rem
+
+    .notice
+      font-size: .875rem
+      color: var(--text-dark)
+
+    .btn
+      margin: 0
+
+  .preview-viewer
+    border: 1px solid var(--border-color)
+    background-color: var(--bg-preview)
+    border-bottom: 0
+    position: relative
+    z-index: 100
+
+    &:not(.framed)
+      padding: 1.5rem 1rem
+
+    &.framed
+      iframe
+        width: 100%
+
+  .code
+    border: 1px solid var(--border-color)
+      

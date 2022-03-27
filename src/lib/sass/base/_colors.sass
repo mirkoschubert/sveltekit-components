@@ -21,12 +21,157 @@ $green-dark: #1e9f56
 $overlay: 30, 32, 48
 
 
-:root
-  --background-color: #{$gray-0}
-  --text-color: #{$white}
-  --text-color-alt: #{$gray-9}
-  --text-color-dark: #{$gray-6}
+$purple900: #1b141f
+$purple800: #3b3440
+$purple700: #5a525f
+$purple600: #6e6572
+$purple500: #968c9b
+$purple400: #b6adbc
+$purple300: #dbd1e0
+$purple200: #ece2f2
+$purple100: #f7ecfc
+$purple50: #fff4ff
 
-  --accent-color: #{$green}
-  --accent-color-light: #{$green-light}
-  --accent-color-dark: #{$green-dark}
+$dark0: #14171D
+$dark1: #171A21
+$dark2: #1C1E25
+$dark3: #20232A
+$dark4: #2C2E34
+$dark5: #34363C
+
+$light0: #9699AA
+
+$blue500: #85888e
+$blue400: #a6a9b0
+$blue300: #cbced5
+$blue200: #dee1e8
+$blue100: #eaedf5
+$blue50: #f4f7fe
+
+$code-green-light: #47ebb4
+$code-green-light-rgb: 71, 235, 180
+
+$code-green-dark: #0aa370
+$code-green-dark-rgb: 10, 163, 112
+
+$d0: #14171d
+$d1: #181b21
+$d2: #1d1f26
+$d3: #21242a
+$d4: #26282e
+$d5: #2a2d33
+$d6: #2f3137
+$d7: #34363c
+
+$b0: #1f2933
+$b1: #323f4b
+$b2: #3e4c59
+$b3: #52606d
+$b4: #616e7c
+$b5: #7b8794
+$b6: #9aa5b1
+$b7: #cbd2d9
+$b8: #e4e7eb
+$b9: #f5f7fa
+
+$p0: #161317
+$p1: #1e1b1e
+$p2: #262226
+$p3: #2f2a2e
+$p4: #383236
+$p5: #413a3e
+
+$pl5: #5d555a
+$pl4: #7a7277
+$pl3: #999095
+$pl2: #b9afb5
+$pl1: #dacfd5
+$pl0: #fcf0f7
+
+$pa0: #161317
+$pa1: #1c1a20
+$pa2: #222029
+$pa3: #272733
+$pa4: #2b2f3e
+$pa5: #2d3748
+
+$t100: #e6fffa
+$t200: #b2f5ea
+$t300: #81e6d9
+$t400: #4fd1c5
+
+$t600: #319795
+$t700: #2c7a7b
+
+
+$green: #0aa370
+$green-light: #47ebb4
+$green-bg: #1D262F
+$green-bg-light: #232D36
+
+$dark0: $pa0
+$dark1: $pa1
+$dark2: $pa2
+$dark3: $pa3
+$dark4: $pa4
+$dark5: $pa5
+
+$accent: $green
+$accent-light: $green-light
+$accent-dark: $green-bg
+
+:root
+  --dark-0: #{$pa0}
+  --dark-1: #{$pa1}
+  --dark-2: #{$pa2}
+  --dark-3: #{$pa3}
+  --dark-4: #{$pa4}
+  --dark-5: #{$pa5}
+
+  --light-0: #{$pl0}
+  --light-1: #{$pl1}
+  --light-2: #{$pl2}
+  --light-3: #{$pl3}
+  --light-4: #{$pl4}
+  --light-5: #{$pl5}
+
+  --green-light: #{$code-green-light}
+  --green-light-rgb: 71, 235, 180
+  --green-dark: #{$code-green-dark}
+  --green-dark-rgb: 10, 163, 112
+
+  --green-bg: #1D262F
+  --green-bg-hover: #232D36
+
+  --background-color-dark: var(--dark-0)
+  --background-color: var(--dark-1)
+  --background-color-light: bar(--dark-2)
+
+  --bg: var(--dark-1)
+  --bg-header: var(--dark-0)
+  --bg-menu: var(--dark-0)
+  --bg-card: var(--dark-2)
+  --bg-code: var(--green-bg)
+  --bg-preview: var(--dark-0)
+
+  --text: var(--light-1)
+  --text-headline: var(--light-0)
+  --text-dark: var(--light-3)
+  --text-disabled: var(--light-5)
+
+  --accent: var(--green-dark)
+  --accent-light: var(--green-light)
+  --accent-dark: var(--green-bg)
+  --accent-dark-hover: var(--green-bg-hover)
+
+  // to be deleted
+  --text-color: #{$pl0}
+  --text-color-alt: #{$pl1}
+  --text-color-dark: #{$pl3}
+
+  --border-color: var(--dark-3)
+
+  // to be deleted
+  --accent-color: var(--green-light)
+  --accent-color-light: var(--green-light)
+  --accent-color-dark: var(--green-dark)
