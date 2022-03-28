@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
+  import { Tag } from '$lib/components'
 
   export let label: string
   export let href: string
@@ -13,15 +14,15 @@
   <div class="menu-item" aria-disabled="true" data-disabled>
     {label}
     {#if tag}
-      <span class="tag">{tag}</span>
+      <Tag type="dark" size="sm">{tag}</Tag>
     {/if}
   </div>
-  {:else}
+{:else}
   <div class="menu-item" data-active={active ? true : null}>
     <a {href} title={label}>
       {label}
       {#if tag}
-        <span class="tag">{tag}</span>
+        <Tag type="dark" size="sm">{tag}</Tag>
       {/if}
     </a>
   </div>

@@ -25,16 +25,16 @@ const menuMap: MenuType = [
       {
         label: 'Header',
         href: '/docs/layout/header',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Menu',
         href: '/docs/layout/menu',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Footer',
-        href: '/docs/layout/Footer',
+        href: '/docs/layout/footer',
         disabled: true
       },
       {
@@ -44,7 +44,7 @@ const menuMap: MenuType = [
       },
       {
         label: 'Section',
-        href: '/docs/layout/Section',
+        href: '/docs/layout/section',
         disabled: true
       },
       {
@@ -67,6 +67,50 @@ const menuMap: MenuType = [
       {
         label: 'Button',
         href: '/docs/components/button',
+      },
+      {
+        label: 'Card',
+        href: '/docs/components/card',
+        disabled: true
+      },
+      {
+        label: 'Carousel',
+        href: '/docs/components/carousel',
+        disabled: true
+      },
+      {
+        label: 'CodeSnippet',
+        href: '/docs/components/codesnippet',
+        disabled: true
+      },
+      {
+        label: 'DefinitionList',
+        href: '/docs/components/definitionlist',
+        tag: 'new'
+      },
+      {
+        label: 'Image',
+        href: '/docs/components/image',
+        disabled: true
+      },
+      {
+        label: 'List',
+        href: '/docs/components/list',
+        tag: 'new'
+      },
+      {
+        label: 'Loading',
+        href: '/docs/components/loading',
+        disabled: true
+      },
+      {
+        label: 'Tabs',
+        href: '/docs/components/tabs',
+        tag: 'new'
+      },
+      {
+        label: 'Tag',
+        href: '/docs/components/tag',
         tag: 'new'
       },
     ]
