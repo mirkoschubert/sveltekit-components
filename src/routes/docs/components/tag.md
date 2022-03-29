@@ -12,12 +12,12 @@ Nulla ea non consequat officia id ex reprehenderit pariatur aliquip commodo ea s
 
 ### Default Tag
 
-<Tag>SvelteKit Components</Tag>
+<Tag>SvelteKit</Tag>
 
 ### Dark Tag
 
-<Tag type="dark">SvelteKit Components</Tag>
+<Tag type="dark">SvelteKit</Tag>
 
 ### Small and Dark Tag
 
-<Tag type="dark" size="sm">SvelteKit Components</Tag>
+<Tag type="dark" size="sm">SvelteKit</Tag>

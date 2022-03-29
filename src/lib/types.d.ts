@@ -5,6 +5,30 @@ export type OrientationType = 'vertical' | 'horizontal'
 
 export type FlexAlignmentType = 'topleft' | 'topcenter' | 'topright' | 'left' | 'center' | 'right' | 'bottomleft' | 'bottomcenter' | 'bottomright'
 
+/** Actions */
+
+export type Action = (
+  node: HTMLElement,
+  parameters: Record<string, unknown>
+) => {
+  update?: (parameters: unknown) => void | Promise<void>
+  destroy?: () => void
+}
+
+/** Notification */
+
+export interface NotificationType {
+  title?: string
+  description?: string
+  type?: 'error' | 'success' | 'warning' | 'info'
+  href?: string
+  [key: string]: unknown
+}
+
+export interface NotificationOptionsType {
+  duration?: number
+}
+
 /** Menu */
 
 export interface MenuItemType {
@@ -29,3 +53,87 @@ export interface DefinitionListItemType {
 }
 
 export type DefinitionListType = DefinitionListItemType[]
+
+/** Card */
+
+export interface CardType {
+  image?: string,
+  icon?: object,
+  title?: string,
+  subtitle?: string,
+  description?: string,
+  href?: string,
+  list?: DefinitionListType
+}
+
+/** Images (Image & Gallery) */
+
+export interface GalleryType {
+  uid: string
+  title: string
+  items: ImageType | ImageType[]
+}
+
+export interface ImageType {
+  alt: string
+  copyright: string
+  dimensions: {
+    width: number
+    height: number
+  }
+  url: string
+  placeholder?: string
+  responsive?: {
+    src: string
+    srcset: string
+  }
+}
+
+export interface ThumbnailType {
+  alt: string
+  url: string
+  dimensions: {
+    width: number
+    height: number
+  }
+  placeholder?: string
+}
+
+/** Music (Album, Song & Player) */
+
+export interface URLType {
+  type: string
+  url: string
+}
+
+export interface AlbumType {
+  id: string
+  uid: string
+  title: string
+  artist?: string
+  description?: []
+  type?: string
+  published?: string
+  genres?: []
+  urls?: URLType[]
+  songs?: SongType[]
+  cover?: {
+    main?: string
+    thumbnail?: string
+  }
+  image?: {
+    hero?: string
+    thumbnail?: string
+  }
+}
+
+export interface SongType {
+  id: string
+  uid: string
+  index?: number
+  title?: string
+  artist?: string
+  length?: string
+  explicit?: boolean
+  file?: string
+}

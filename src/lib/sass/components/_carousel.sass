@@ -1,0 +1,114 @@
+.carousel
+  width: 100%
+  max-width: var(--page-width)
+  margin: 0 auto
+
+  .header
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: space-between
+    background-color: transparent
+    border: 0
+    margin-bottom: 1rem
+    height: auto
+
+    h2
+      margin: 0
+      line-height: 1.3
+      color: var(--gray-9)
+
+  .splide
+    background-color: none
+    padding: 0
+    width: 100%
+    border-radius: .25rem
+    margin-bottom: 2rem
+
+    .splide__arrow
+      top: 0
+      bottom: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      transform: none
+      background-color: var(--gray-3)
+      width: 3rem
+      opacity: 0
+      transition: all .3s ease-in
+
+      svg
+        fill: var(--white)
+
+      &:hover
+        opacity: .6
+
+    .splide__arrow--prev
+      left: 0
+      border-radius: .25rem 0 0 .25rem
+
+    .splide__arrow--next
+      right: 0
+      border-radius: 0 .25rem .25rem 0
+
+    .splide__pagination
+      bottom: -1.5rem
+      padding: 0
+
+    .splide__pagination__page
+      background-color: var(--gray-5)
+
+    .splide__pagination__page.is-active
+      background-color: var(--gray-6)
+
+    .splide__slide
+      position: relative
+      background-color: var(--gray-3)
+      display: flex
+      align-items: center
+      justify-content: center
+      aspect-ratio: 4 / 3
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat 
+
+      .inner
+        position: relative
+        width: 100%
+        height: 100%
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center
+          border-radius: .25rem
+
+        a
+          display: block
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+          color: var(--gray-9)
+
+        .title
+          position: absolute
+          top: 0
+          left: 0
+          padding: .5rem 1rem
+          width: 100%
+          height: 100%
+          background-color: rgba(var(--overlay), .4)
+          display: flex
+          align-items: center
+          justify-content: center
+          transition: all .3s ease-in
+          text-align: center
+
+          &:hover
+            background-color: rgba(var(--overlay), .2)
+
+

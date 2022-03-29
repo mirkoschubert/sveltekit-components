@@ -1,0 +1,84 @@
+.card
+  border: 1px solid $dark4
+  border-radius: .25rem
+  background-color: $dark2
+  max-width: 280px
+
+  .image
+    width: 100%
+    position: relative
+    display: inline-block
+    border-radius: .25rem .25rem 0 0
+
+    img
+      width: 100%
+      aspect-ratio: 4 / 3
+      object-fit: cover
+      object-position: center
+      border-radius: .25rem .25rem 0 0
+
+    .overlay
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      border-radius: .25rem .25rem 0 0
+      background-color: rgba($dark5, 40%)
+      transition: all .3s ease-in
+
+    a
+      display: inline-block
+
+      &:hover .overlay
+        background-color: rgba($dark5, 20%)
+
+  .info
+    width: 100%
+    padding: 1rem
+
+    h3
+      margin: 0
+      color: $accent
+
+    h4
+      margin-top: 0
+      margin-bottom: .825em
+
+    .description
+      color: $light3
+      margin-top: .825em
+      margin-bottom: 0
+
+    .list
+      width: 100%
+
+  .buttons
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: stretch
+
+    .btn
+      flex: 1
+      line-height: 1.3
+      hyphens: auto
+      justify-content: center
+      border-radius: 0
+      background-color: $accent-dark
+      color: $accent
+      border-right: 1px solid $dark4
+      border-top: 1px solid $dark4
+      border-left: 0
+      border-bottom: 0
+      margin: 0
+
+      &:hover
+        background-color: lighten($accent-dark, 3%)
+        color: $accent-light
+
+      &:first-child
+        border-bottom-left-radius: .25rem
+      &:last-child
+        border-bottom-right-radius: .25rem
+        border-right: 0

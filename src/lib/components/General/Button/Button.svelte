@@ -20,6 +20,7 @@
     {title}
     target={href.startsWith('http') ? '_blank' : ''}
     {...$$restProps}
+    on:click
   >
     {#if hasIcon}    
       <span class="icon">
@@ -31,7 +32,12 @@
     </span>
   </a>
   {:else}
-  <button class="btn{s}{t}" class:selected>
+  <button
+    class="btn{s}{t}"
+    class:selected
+    {...$$restProps}
+    on:click
+  >
     {#if hasIcon}      
       <span class="icon">
         <slot name="icon" />

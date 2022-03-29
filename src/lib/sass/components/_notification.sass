@@ -1,0 +1,113 @@
+.notification
+  display: flex
+  flex-direction: column
+  min-width: 150px
+  max-width: 250px
+  min-height: 100px
+  background-color: $accent-dark
+  border: 1px solid $accent
+  border-radius: .25rem
+  padding: .5rem
+  position: relative
+  pointer-events: auto
+
+  &.clickable
+    cursor: pointer
+
+  .heading
+    display: flex
+    align-items: center
+    .icon
+      width: 32px
+      height: 32px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $accent-light
+
+    .title
+      margin: 0 0 0 .5rem
+      font-size: 1rem
+      color: $accent-light
+  
+  .description
+    margin-left: 2.5rem
+    color: $accent
+    font-size: .875rem
+    line-height: 1.5
+    margin-bottom: .25rem
+
+  .close
+    background-color: $accent-dark
+    border: 1px solid $accent
+    border-radius: 50%
+    color: $accent-light
+    padding: 0
+    width: 20px
+    height: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: -7px
+    right: -7px
+    cursor: pointer
+    z-index: 2000
+
+    &:hover
+      border-color: $accent-light
+      background-color: lighten($accent-dark, 3%)
+
+.notification-provider
+  position: fixed
+  z-index: 1000
+  top: calc(var(--header-size) + 1rem)
+  left: 1rem
+  bottom: 1rem
+  right: 1rem
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  pointer-events: none
+
+  .area
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    gap: .25rem
+
+  &.top-right
+    justify-content: flex-start
+    align-items: flex-end
+
+  &.top-center
+    justify-content: flex-start
+    align-items: center
+
+  &.top-left
+    justify-content: flex-start
+    align-items: flex-start
+
+  &.bottom-right
+    justify-content: flex-end
+    align-items: flex-end
+
+    .area
+      flex-direction: column-reverse
+
+  &.bottom-center
+    justify-content: flex-end
+    align-items: center
+
+    .area
+      flex-direction: column-reverse
+
+  &.bottom-left
+    justify-content: flex-end
+    align-items: flex-start
+
+    .area
+      flex-direction: column-reverse
+
+  
+

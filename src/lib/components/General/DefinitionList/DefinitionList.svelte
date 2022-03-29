@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { DefinitionListType, OrientationType } from '$lib/types'
-  import { DefinitionListItem } from '$components/DefinitionList'
+  import { DefinitionListItem } from '$lib/components'
 
   export let orientation: OrientationType = 'vertical'
   export let items: DefinitionListType = []

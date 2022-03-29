@@ -25,12 +25,10 @@ const menuMap: MenuType = [
       {
         label: 'Header',
         href: '/docs/layout/header',
-        tag: 'new'
       },
       {
         label: 'Menu',
         href: '/docs/layout/menu',
-        tag: 'new'
       },
       {
         label: 'Footer',
@@ -71,7 +69,7 @@ const menuMap: MenuType = [
       {
         label: 'Card',
         href: '/docs/components/card',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Carousel',
@@ -86,7 +84,6 @@ const menuMap: MenuType = [
       {
         label: 'DefinitionList',
         href: '/docs/components/definitionlist',
-        tag: 'new'
       },
       {
         label: 'Image',
@@ -96,22 +93,49 @@ const menuMap: MenuType = [
       {
         label: 'List',
         href: '/docs/components/list',
-        tag: 'new'
       },
       {
         label: 'Loading',
         href: '/docs/components/loading',
-        disabled: true
+        tag: 'new'
+      },
+      {
+        label: 'Notification',
+        href: '/docs/components/notification',
+        tag: 'new'
       },
       {
         label: 'Tabs',
         href: '/docs/components/tabs',
-        tag: 'new'
       },
       {
         label: 'Tag',
         href: '/docs/components/tag',
-        tag: 'new'
+      },
+    ]
+  },
+  {
+    label: 'Advanced',
+    items: [
+      {
+        label: 'Album',
+        href: '/docs/advanced/album',
+        disabled: true
+      },
+      {
+        label: 'Gallery',
+        href: '/docs/advanced/gallery',
+        disabled: true
+      },
+      {
+        label: 'Player',
+        href: '/docs/advanced/player',
+        disabled: true
+      },
+      {
+        label: 'Songs',
+        href: '/docs/advanced/songs',
+        disabled: true
       },
     ]
   }
