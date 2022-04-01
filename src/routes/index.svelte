@@ -6,7 +6,7 @@
   <title>SvelteKit Components by Mirko Schubert</title>
 </svelte:head>
 
-<Content>
+<Content centered>
   <Section centered>
     <div class="heading">
       <h1>SvelteKit Components</h1>

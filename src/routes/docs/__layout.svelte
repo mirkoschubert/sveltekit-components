@@ -24,7 +24,7 @@
       </MenuSection>
     {/each}
   </Menu>
-  <Content centered>
+  <Content>
     <slot />
   </Content>
 </div>
