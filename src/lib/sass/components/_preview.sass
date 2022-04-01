@@ -18,19 +18,26 @@
     border: 1px solid var(--border-color)
     background-color: var(--bg-preview)
     border-bottom: 0
+    padding: 1.5rem 1rem
     position: relative
     z-index: 100
 
-    &:not(.framed)
-      padding: 1.5rem 1rem
 
     &.framed
       min-height: 260px
-      height: auto
+      height: 100%
+      padding: 0
 
       iframe
+        position: absolute
         width: 100%
+        height: 100%
 
   .code
     border: 1px solid var(--border-color)
       
+body.framed
+  background-color: $dark0
+  padding: 0
+  min-height: 100vh
+  width: 100%

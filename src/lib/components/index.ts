@@ -4,15 +4,20 @@ export { default as Preview }               from './_internal/Preview'
 
 /** Layout */
 
-export { default as Layout }                from './Layout'
+export { default as ThemeProvider }         from './Layout/Theme/ThemeProvider.svelte'
+export { default as ThemeToggle }           from './Layout/Theme/ThemeToggle.svelte'
 
 export { default as Content }               from './Layout/Content'
 
 export { default as Footer }                from './Layout/Footer'
 
 export { default as Grid }                  from './Layout/Grid'
+export { default as GridItem }              from './Layout/Grid/GridItem.svelte'
 
 export { default as Header }                from './Layout/Header/Header.svelte'
+export { default as HeaderLeft }            from './Layout/Header/HeaderLeft.svelte'
+export { default as HeaderCenter }          from './Layout/Header/HeaderCenter.svelte'
+export { default as HeaderRight }           from './Layout/Header/HeaderRight.svelte'
 export { default as HeaderLogo }            from './Layout/Header/HeaderLogo.svelte'
 export { default as HeaderNav }             from './Layout/Header/HeaderNav.svelte'
 export { default as HeaderNavItem }         from './Layout/Header/HeaderNavItem.svelte'
@@ -25,6 +30,7 @@ export { default as Menu }                  from './Layout/Menu/Menu.svelte'
 export { default as MenuSection }           from './Layout/Menu/MenuSection.svelte'
 export { default as MenuItem }              from './Layout/Menu/MenuItem.svelte'
 
+export { default as Search }               from './Layout/Search'
 
 export { default as Section }               from './Layout/Section'
 export { default as Row }                   from './Layout/Section/Row.svelte'

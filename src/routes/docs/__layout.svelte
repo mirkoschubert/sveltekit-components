@@ -12,7 +12,6 @@
 
 </script>
 
-
 <div class="wrapper">
   <Menu>
     {#each $menu.map as section}
@@ -25,7 +24,7 @@
       </MenuSection>
     {/each}
   </Menu>
-  <Content>
+  <Content centered>
     <slot />
   </Content>
 </div>

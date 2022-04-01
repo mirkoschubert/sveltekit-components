@@ -1,19 +1,22 @@
 <script lang="ts">
-  import HeaderLogo from './HeaderLogo.svelte'
+  import { HeaderLeft, HeaderCenter, HeaderRight, HeaderLogo } from '$lib/components'
 
   export let isSticky: boolean = false
-  //export let size: string = '4rem'
-
-  
 </script>
 
 <header
   class="header"
   class:sticky={isSticky}
 >
-  <slot name="skip-to-content" />
-  <slot name="logo">
-    <HeaderLogo />
+  <slot>
+    <HeaderLeft>
+      <HeaderLogo />
+    </HeaderLeft>
+    <HeaderCenter>
+
+    </HeaderCenter>
+    <HeaderRight>
+
+    </HeaderRight>
   </slot>
-  <slot />
 </header>

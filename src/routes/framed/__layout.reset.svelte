@@ -11,10 +11,3 @@
 </script>
 
 <slot />
-
-<style lang="sass" global>
-  body.framed
-    min-height: 100vh
-    width: 100%
-    padding: 1.5rem 1rem
-</style>

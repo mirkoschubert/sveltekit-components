@@ -1,5 +1,8 @@
 export { default as HeaderNavItem } from './HeaderNavItem.svelte'
 export { default as HeaderNav } from './HeaderNav.svelte'
 export { default as HeaderLogo } from './HeaderLogo.svelte'
+export { default as HeaderLeft } from './HeaderLeft.svelte'
+export { default as HeaderCenter } from './HeaderCenter.svelte'
+export { default as HeaderRight } from './HeaderRight.svelte'
 export { default as Header } from './Header.svelte'
 export { default as default } from './Header.svelte'
