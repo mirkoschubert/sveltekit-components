@@ -1,0 +1,52 @@
+.modal
+  position: fixed
+  z-index: 9000
+  top: 0
+  left: 0
+  display: flex
+  width: 100vw
+  height: 100vh
+  align-items: center
+  justify-content: center
+  background-color: rgba($dark0, 90%)
+  opacity: 0
+  transition: all .3s ease-in
+  visibility: hidden
+
+  &.visible
+    opacity: 1
+    visibility: inherit
+
+  .inner
+    position: static
+    width: 85%
+    height: auto
+    max-height: 90%
+    background-color: $accent-dark
+    border: 1px solid $accent
+    border-radius: .25rem
+    min-height: 8rem
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: auto 1fr auto
+    box-shadow: var(--shadow)
+
+    @include desktop
+      width: 50%
+
+    .header
+      border-bottom: 1px solid $accent
+      height: 3rem
+      background-color: transparent
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: .5rem 1rem
+      box-shadow: none
+
+      .title
+        color: $accent-light
+
+    .body
+      padding: 1rem
+      color: $accent

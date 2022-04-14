@@ -1,0 +1,91 @@
+.aspect-ratio
+  position: relative
+
+  &::before
+    width: 1px
+    height: 0
+    margin-left: -1px
+    content: ''
+    float: left
+
+  &::after
+    display: table
+    clear: both
+    content: ''
+
+  &>.inner
+    background-color: $dark3
+    position: absolute
+    top: 0
+    left: 0
+    width: 100% !important
+    height: 100% !important
+    max-width: none !important
+    margin: 0 !important
+
+  &.r1x1
+    aspect-ratio: 1/1
+
+    &::before
+      padding-top: 100%
+
+  &.r4x3
+    aspect-ratio: 4/3
+
+    &::before
+      padding-top: 75%
+
+  &.r3x2
+    aspect-ratio: 3/2
+
+    &::before
+      padding-top: 66.6667%
+
+  &.r16x9
+    aspect-ratio: 16/9
+
+    &::before
+      padding-top: 56.25%
+
+  &.r2x1
+    aspect-ratio: 2/1
+
+    &::before
+      padding-top: 50%
+
+  &.r21x9
+    aspect-ratio: 21/9
+
+    &::before
+      padding-top: 42.857%
+
+  &.r3x4
+    aspect-ratio: 3/4
+
+    &::before
+      padding-top: 133.3333%
+
+  &.r2x3
+    aspect-ratio: 2/3
+
+    &::before
+      padding-top: 150%
+
+  &.r9x16
+    aspect-ratio: 9/16
+
+    &::before
+      padding-top: 177.7778%
+
+  &.r1x2
+    aspect-ratio: 1/2
+
+    &::before
+      padding-top: 200%
+
+  &.r9x21
+    aspect-ratio: 9/21
+
+    &::before
+      padding-top: 233.3333%
+  

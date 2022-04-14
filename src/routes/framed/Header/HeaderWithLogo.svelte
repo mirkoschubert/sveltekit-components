@@ -1,12 +1,18 @@
 <script>
-  import { Header, HeaderLogo } from '$lib/components'
+  import { Header, HeaderLeft, HeaderCenter, HeaderRight, HeaderLogo, Search, ThemeToggle } from '$lib/components'
   import { ImageIcon } from 'svelte-feather-icons'
 </script>
 
 <Header>
-  <svelte:fragment slot="logo">
+  <HeaderLeft>
     <HeaderLogo>
       <ImageIcon size="32" />
     </HeaderLogo>
-  </svelte:fragment>
+  </HeaderLeft>
+  <HeaderCenter>
+    <Search />
+  </HeaderCenter>
+  <HeaderRight>
+    <ThemeToggle />
+  </HeaderRight>
 </Header>

@@ -5,7 +5,7 @@
 
 <div
 	use:portal={target}
-	data-steeze-portal
+	data-portal
 	style="position: absolute; top: 0px; left: 0px; z-index: 2147483647;"
 >
 	<slot />

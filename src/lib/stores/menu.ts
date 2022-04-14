@@ -25,12 +25,11 @@ const menuMap: MenuType = [
       {
         label: 'AspectRatio',
         href: '/docs/layout/aspect-ratio',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Content',
         href: '/docs/layout/content',
-        tag: 'new'
       },
       {
         label: 'ContextMenu',
@@ -50,16 +49,16 @@ const menuMap: MenuType = [
       {
         label: 'Grid',
         href: '/docs/layout/grid',
-        tag: 'new'
       },
       {
         label: 'Header',
         href: '/docs/layout/header',
+        tag: 'updated'
       },
       {
         label: 'Hero',
         href: '/docs/layout/hero',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Logo',
@@ -69,6 +68,7 @@ const menuMap: MenuType = [
       {
         label: 'Menu',
         href: '/docs/layout/menu',
+        tag: 'updated'
       },
       {
         label: 'Pagination',
@@ -83,7 +83,6 @@ const menuMap: MenuType = [
       {
         label: 'Section',
         href: '/docs/layout/section',
-        tag: 'new'
       },
 
     ]
@@ -92,9 +91,9 @@ const menuMap: MenuType = [
     label: 'General',
     items: [
       {
-        label: 'Accordeon',
-        href: '/docs/components/accordeon',
-        disabled: true,
+        label: 'Accordion',
+        href: '/docs/components/accordion',
+        tag: 'new'
       },
       {
         label: 'Alert',
@@ -118,7 +117,6 @@ const menuMap: MenuType = [
       {
         label: 'Card',
         href: '/docs/components/card',
-        tag: 'new'
       },
       {
         label: 'Carousel',
@@ -142,7 +140,7 @@ const menuMap: MenuType = [
       {
         label: 'Image',
         href: '/docs/components/image',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Link',
@@ -156,17 +154,15 @@ const menuMap: MenuType = [
       {
         label: 'Loading',
         href: '/docs/components/loading',
-        tag: 'new'
       },
       {
         label: 'Modal',
         href: '/docs/components/modal',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Notification',
         href: '/docs/components/notification',
-        tag: 'new'
       },
       {
         label: 'Popover',

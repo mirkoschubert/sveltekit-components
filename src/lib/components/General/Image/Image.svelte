@@ -1,29 +1,34 @@
-<!-- <script lang="ts">
-  import type { ImageField } from '@prismicio/types'
-  import { asImageWidthSrcSet} from '@prismicio/helpers'
+<script lang="ts">
+  import type { ImageType, AspectRatioType } from '$lib/types'
+  import { AspectRatio } from '$lib/components'
 
-  export let image: ImageField = {}
-  export let caption: boolean | string = false
-  export let isPicture: boolean = false
-
-  let item: { src: string, srcset: string }
-
-  $: item = asImageWidthSrcSet(image)
-  $: cpt = caption ? (typeof caption === 'string' ? caption : image.alt) : ''
-  $: console.log(item, cpt)
+  export let item: ImageType | string = ''
+  export let alt: string = ''
+  export let caption: string = ''
+  export let ratio: AspectRatioType = '4x3'
+  export let picture: boolean = false
 </script>
 
-{#if isPicture}
-  <figure class="image">
-    <picture>
-      <source srcset={item.srcset} sizes="300w 600w 960w 1440w 3000w" />
-      <img src={item.src} alt={image.alt} />
-    </picture>
-    <figcaption>{cpt}</figcaption>
-  </figure>
-{:else}
-  <figure class="image">
-    <img src={item.src} srcset={item.srcset} alt={image.alt} />
-    <figcaption>{cpt}</figcaption>
-  </figure>
-{/if} -->
+<figure class="image">
+  <AspectRatio {ratio}>
+    {#if picture}
+      <picture {...$$restProps}>
+        {#if typeof item === 'string'}
+          <img src={item} {alt} />
+        {:else}
+          <source srcset={item.responsive?.srcset} sizes="300w 600w 960w 1440w 3000w" />
+          <img src={item.url} alt={item.alt} />
+        {/if}
+      </picture>
+    {:else}
+      {#if typeof item === 'string'}
+        <img src={item} {alt}  {...$$restProps} />
+      {:else}
+        <img src={item.url} srcset={item.responsive?.srcset} alt={item.alt}  {...$$restProps} />
+      {/if}
+    {/if}
+  </AspectRatio>
+  {#if caption !== ''}
+    <figcaption class="caption">{caption}</figcaption>
+  {/if}
+</figure>

@@ -1,14 +1,14 @@
 <script>
-  import { Content, Section, Header, HeaderLogo, Menu, MenuSection, MenuItem } from '$lib/components'
+  import { Content, Section, Header, HeaderLeft, HeaderLogo, Menu, MenuSection, MenuItem } from '$lib/components'
   import { ApertureIcon } from 'svelte-feather-icons'
 </script>
 
 <Header isSticky>
-  <svelte:fragment slot="logo">
+  <HeaderLeft>
     <HeaderLogo>
       <ApertureIcon size="32" />
     </HeaderLogo>
-  </svelte:fragment>
+  </HeaderLeft>
 </Header>
 <div class="wrapper">
   <Menu>

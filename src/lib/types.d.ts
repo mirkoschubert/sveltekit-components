@@ -5,6 +5,8 @@ export type OrientationType = 'vertical' | 'horizontal'
 
 export type FlexAlignmentType = 'topleft' | 'topcenter' | 'topright' | 'left' | 'center' | 'right' | 'bottomleft' | 'bottomcenter' | 'bottomright'
 
+export type AspectRatioType = '1x1' | '4x3' | '3x2' | '16x9' | '2x1' | '21x9' | '3x4' | '2x3' | '9x16' | '1x2' | '9x21'
+
 /** Actions */
 
 export type Action = (

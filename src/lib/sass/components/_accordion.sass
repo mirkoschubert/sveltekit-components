@@ -1,0 +1,78 @@
+.accordion
+  width: 100%
+  list-style: none
+  padding: 0
+
+  &>.item
+    overflow: visible
+    border-top: 1px solid $light5
+    transition: all .3s ease-in
+
+    .heading
+      appearance: none
+      background: none
+      position: relative
+      display: flex
+      width: 100%
+      min-height: 2.5rem
+      flex-direction: row
+      align-items: flex-start
+      justify-content: space-between
+      margin: 0
+      border: 0
+      padding: .625rem 1rem
+      color: $light1
+      transition: all .3s ease-in
+
+      &:hover
+        background-color: $dark3
+
+      svg
+        flex: 0 0 1rem
+        width: 1rem
+        height: 1rem
+        transform: rotate(-270deg)
+        transition: all .3s ease-in
+
+      .title
+        text-align: left
+      
+    .body
+      padding: 1rem
+      display: none
+
+    &.expanding
+      .body
+        animation: .3s ease-in expand-accordion
+
+    &.collapsing
+      .body
+        animation: .3s ease-in collapse-accordion
+
+    &.active
+      .heading
+        svg
+          transform: rotate(-90deg)
+      
+      .body
+        display: block
+
+@keyframes expand-accordion
+  0%
+    height: 0
+    opacity: 0
+    visibility: hidden
+  to
+    height: 100%
+    opacity: 1
+    visibility: inherit
+
+@keyframes collapse-accordion
+  0%
+    height: 100%
+    opacity: 1
+    visibility: inherit
+  to
+    height: 0
+    opacity: 0
+    visibility: hidden

@@ -1,8 +1,7 @@
 <script lang="ts">
   import type { FlyParams } from 'svelte/transition'
   import { Notify } from '$lib/stores/notification'
-  import { Notification } from '$lib/components'
-  import Portal from './Portal.svelte'
+  import { Notification, Portal } from '$lib/components'
 
   export let position: 'top-right' | 'top-center' | 'top-left' | 'bottom-right' | 'bottom-center' | 'bottom-left' = 'top-right'
 	export let duration: number = 5000

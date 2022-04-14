@@ -7,6 +7,8 @@ export { default as Preview }               from './_internal/Preview'
 export { default as ThemeProvider }         from './Layout/Theme/ThemeProvider.svelte'
 export { default as ThemeToggle }           from './Layout/Theme/ThemeToggle.svelte'
 
+export { default as AspectRatio }           from './Layout/AspectRatio'
+
 export { default as Content }               from './Layout/Content'
 
 export { default as Footer }                from './Layout/Footer'
@@ -39,6 +41,9 @@ export { default as Column }                from './Layout/Section/Column.svelte
 
 /** General */
 
+export { default as Accordion }             from './General/Accordion'
+export { default as AccordionItem }         from './General/Accordion/AccordionItem.svelte'
+
 export { default as Button }                from './General/Button'
 export { default as CopyButton }            from './General/Button/CopyButton.svelte'
 
@@ -59,9 +64,13 @@ export { default as ListItem }              from './General/List/ListItem.svelte
 
 export { default as Loading }               from './General/Loading'
 
+export { default as Modal }                 from './General/Modal'
+
 export { default as Notification }          from './General/Notification'
 export { default as NotificationProvider }  from './General/Notification/NotificationProvider.svelte'
 export { Notify }                           from '../stores/notification'
+
+export { default as Portal }                from './General/Portal'
 
 export { default as Tabs }                  from './General/Tabs'
 export { default as Tab }                   from './General/Tabs/Tab.svelte'
