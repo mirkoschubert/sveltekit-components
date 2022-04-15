@@ -1,40 +1,82 @@
-# create-svelte
+# SvelteKit Components
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+`sveltekit-components` is an opinionated UI kit with dozens of components dedicated to SvelteKit. For more information please visit the [Demo & Documentation](https://sveltekit-components.mirkoschubert.com) App!
 
-## Creating a project
+**WARNING:** This library is an **early alpha** and under heavy development! Things might break in the future - please use it with care!
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
+
+If you want to create a new project just type the following commands in your command line:
 
 ```bash
-# create a new project in the current directory
-npm init svelte@next
-
 # create a new project in my-app
 npm init svelte@next my-app
-```
 
-> Note: the `@next` is temporary
+# go to the project folder and install the dependencies
+cd my-app && npm install
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+# start the development server
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+To install the library just type:
 
 ```bash
-npm run build
+npm install -D sveltekit-components
 ```
 
-You can preview the production build with `npm run preview`.
+You can also use `yarn` or `pnpm` of course.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Usage
+
+### Import the CSS/ SASS
+
+To use the library you first have to import the main CSS file. Please note that you can only use the SASS files at the moment. Make sure that SASS preprocessing is up and running!
+
+Open or create your `__layout.svelte` file and import the main SASS file in the `<script>` part.
+
+```js
+  import 'sveltekit-components/sass/main.sass'
+```
+
+### Install the Providers
+
+If you want to use the `Theme` or `Notification` feature you should initialize the corresponding Providers in the `__layout.svelte` as well:
+
+```js
+  <script>
+    import { ThemeProvider, NotificationProvider } from 'sveltekit-components'
+  <script>
+
+  <ThemeProvider fromSystem />
+  <NotificationProvider duration={3000} position="top-right" closable="true" />
+```
+
+### Using the Library Stores
+
+A few of the components are using their own stores. For example, if you want to send a notification to the `NotificationProvider` you have to import the notification store:
+
+```js
+  <script>
+    import { Button } from 'sveltekit-components'
+    import { Notify } from 'sveltekit-components/stores/notification'
+  </script>
+
+  <Button
+    on:click={() => {
+      Notify.show({
+        title: 'Example',
+        description: 'This is an example',
+        type: 'success'
+      })
+    }}
+  >
+    Click me!
+  </Button>
+```
+
+## License & Contribution
+
+This software is licensed under the MIT License.
+
+To contribute please fork the project and start a pull request once you're ready!
