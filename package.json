@@ -1,6 +1,8 @@
 {
   "name": "sveltekit-components",
   "version": "0.1.0",
+  "description": "An opinionated UI library of SvelteKit components",
+  "license": "MIT",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -44,5 +46,18 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.6",
     "@fontsource/source-sans-pro": "^4.5.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirkoschubert/sveltekit-components.git"
+  },
+  "homepage": "https://sveltekit-components.mirkoschubert.com",
+  "bugs": "https://github.com/mirkoschubert/sveltekit-components/issues",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "component library",
+    "ui library",
+    "ui kit"
+  ]
 }
