@@ -10,8 +10,6 @@ components: ['Accordion', 'AccordionItem']
 
 Dolor elit id irure tempor anim do eiusmod sint sunt ea officia voluptate amet ex. Consequat cupidatat ut et fugiat duis occaecat. Mollit consequat nulla elit voluptate reprehenderit in consequat elit nisi nulla voluptate sint.
 
-## Examples
-
 ### Default Accordion
 
 <Accordion>

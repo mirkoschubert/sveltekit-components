@@ -5,14 +5,14 @@ layout: overview
 
 ## Components for SvelteKit
 
-Proident nostrud in eiusmod nulla Lorem. Ex esse ad Lorem labore et excepteur adipisicing cillum adipisicing officia id deserunt aliqua irure. Incididunt tempor est incididunt officia adipisicing cupidatat. Consequat nisi mollit sit ut fugiat qui irure tempor id consequat minim. Id consequat nulla consectetur duis ex tempor.
+`sveltekit-components` is an opinionated UI kit exclusively for SvelteKit. Please not that the library is in **early alpha** and under heavy development! Some components may break in the future, so please don't use it in production.
 
 ## Motivation
 
-Excepteur excepteur consectetur cillum irure ad eu sunt consequat pariatur dolore tempor. Irure sint occaecat minim cillum anim qui voluptate non minim est est cupidatat ea. Quis quis eu do magna sit sit tempor labore eiusmod.
+There are not many UI libraries or single components for SvelteKit. Some libraries provide only a few components and are not suitable for creating a complete website or webapp.
 
-Voluptate occaecat aliqua excepteur nostrud adipisicing fugiat et ut enim tempor laborum voluptate. Magna cillum velit ad ipsum ipsum Lorem eiusmod eiusmod proident. Incididunt irure sit quis sit amet voluptate. Quis quis aliqua consectetur ut in incididunt exercitation labore cillum.
+In the course of rebuilding my own website mirkoschubert.com I decided to create one of the most comprehensive SvelteKit component libraries. Besides, I want to learn more about Svelte and SvelteKit during the development of the components in order to implement future webapps faster.
 
 ## Contribution
 
-Exercitation sunt commodo mollit ad nisi eu nisi laboris minim eiusmod nostrud. Eiusmod cillum elit elit laboris magna non deserunt officia. Incididunt deserunt duis aliquip eu aliqua irure esse culpa aliquip labore. Proident eiusmod esse est commodo laborum adipisicing id. Non proident dolor consequat dolor laborum adipisicing qui do.
+If you want to contribute please report any [issues](https://github.com/mirkoschubert/sveltekit-components/issues) you find while using my library! You can also develop new or planned components by forking the [Github repository](https://github.com/mirkoschubert/sveltekit-components/) and create a pull request once you finished.

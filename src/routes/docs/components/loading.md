@@ -8,8 +8,6 @@ components: ['Loading']
   import { Loading, Preview } from '$lib/components'
 </script>
 
-## Examples
-
 ### Loading Animation
 
 <Loading />

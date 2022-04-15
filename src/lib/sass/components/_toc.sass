@@ -1,0 +1,20 @@
+.toc
+  background-color: $dark2
+  padding: 1rem
+
+  h3
+    font-size: 1.125rem
+
+  div[slot=aside]
+    font-size: .875rem
+
+  @include desktop
+    position: fixed
+    top: $header-size
+    width: 16rem
+    right: 0
+    height: calc(100vh - $header-size)
+
+.content.has-toc
+  @include desktop
+    margin-right: 16rem

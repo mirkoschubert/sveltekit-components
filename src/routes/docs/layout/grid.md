@@ -10,8 +10,6 @@ components: ['Grid', 'GridItem']
 
 Enim sit dolore officia do nulla excepteur amet. Anim nostrud irure occaecat velit adipisicing exercitation deserunt amet ut. Et cupidatat ut Lorem laborum voluptate dolore dolore consectetur aute. Magna culpa velit Lorem exercitation ea enim sit nostrud voluptate aute occaecat. Enim tempor sunt cillum magna aute non adipisicing irure sunt veniam irure exercitation esse.
 
-## Examples
-
 ### Default Grid
 
 The default grid has `4` columns and no gap. It's fully responsive and reduces the columns depending on the display size.

@@ -5,16 +5,24 @@ layout: overview
 
 ## Install the package
 
-Ut adipisicing nisi voluptate dolor labore non sunt adipisicing laboris do fugiat officia. Esse excepteur ipsum consequat ad minim magna adipisicing irure nostrud excepteur. Proident est qui velit veniam amet ea enim cupidatat adipisicing eu minim nostrud aliquip quis.
+First of all you should install the `sveltekit-components` as a devolpment dependency.
 
 ```bash
-npm install -D @mirkoschubert/sveltekit-components
+npm install -D sveltekit-components
 ```
 
 ## Import the default styles
 
-Officia non veniam veniam et adipisicing. Laborum reprehenderit eiusmod est aliquip cillum esse. Ea esse laborum dolor esse esse laborum. Esse aute aliquip in consectetur Lorem esse culpa. Dolore dolor ad laborum tempor officia.
+At the moment there are only the SASS files available. Please make sure that you have SASS preprocessing configured. The best way to import the default styles is in your `__layout.svelte` file:
 
 ```js
-import '@mirkoschubert/sveltekit-components/css/main.css'
+import 'sveltekit-components/sass/main.sass'
+```
+
+## Install an icon set
+
+`svelte-components` uses the [Feather Icons](https://feathericons.com/) by default, but you can use any SVG icon set you want. You can install the Feather Icons for your project with the following command:
+
+```bash
+npm install svelte-feather-icons
 ```

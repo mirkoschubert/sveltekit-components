@@ -10,8 +10,6 @@ components: ['Image']
 
 Non reprehenderit laborum commodo culpa sit reprehenderit. Reprehenderit commodo aute nostrud est adipisicing fugiat cillum aliqua. Et qui consectetur officia fugiat minim excepteur ad ut nulla ut fugiat pariatur. Dolore labore anim excepteur ipsum qui.
 
-## Examples
-
 ### Default Image
 
 Nostrud elit cupidatat anim fugiat.

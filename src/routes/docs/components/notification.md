@@ -10,8 +10,6 @@ components: ['Notification', 'NotificationProvider']
 
 Laborum quis proident non quis minim quis nulla nulla sint cillum duis commodo. Velit tempor elit ipsum officia ex voluptate enim. Pariatur cillum Lorem dolore magna fugiat mollit proident mollit pariatur aliquip qui. Cillum mollit anim veniam ullamco commodo ex voluptate in culpa pariatur cupidatat. Consequat do sunt nisi laborum pariatur cupidatat Lorem velit.
 
-## Examples
-
 ### Default Notification
 
 <Button

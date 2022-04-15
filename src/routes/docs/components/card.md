@@ -10,8 +10,6 @@ components: ['Card', 'CardHeading', 'CardImage', 'CardInfo']
 
 Non eu elit ad eu consectetur quis aute non deserunt sint officia anim. Ea deserunt ex magna sit laborum ipsum aute ex laboris anim. Do reprehenderit tempor quis labore in enim officia elit eiusmod. Quis tempor ad eu ut dolor ut proident id ullamco.
 
-## Examples
-
 ### Default Card with Slots
 
 <Card>

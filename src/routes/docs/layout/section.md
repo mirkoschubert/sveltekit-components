@@ -10,8 +10,6 @@
 
 Consequat reprehenderit dolor consectetur elit in reprehenderit velit. Voluptate ad cupidatat sunt eu minim culpa laboris veniam officia. Ea ullamco amet cupidatat ullamco incididunt nostrud pariatur adipisicing aliqua culpa minim eiusmod. Qui do fugiat proident velit consequat sint. Exercitation aliqua et aliqua adipisicing laborum veniam veniam reprehenderit velit ut velit dolor ex. In occaecat sint laboris deserunt laborum do duis fugiat occaecat esse. Aute esse laboris non enim.
 
-## Examples
-
 ### Default Section
 
 <Section>Consequat veniam laboris non deserunt.</Section>
