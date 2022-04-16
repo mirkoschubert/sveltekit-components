@@ -1,5 +1,4 @@
 
-
 export const directives = (dev, rootDomain) => {
   return {
     'base-uri': ['self'],
@@ -59,7 +58,9 @@ export const directives = (dev, rootDomain) => {
       'report-sample',
       'https://prismic.io',
       'https://*.prismic.io',
-      'https://static.cloudflareinsights.com'
+      'https://static.cloudflareinsights.com',
+      'https://plausible.io',
+      'https://plausible.speedynetz.de'
     ],
     'worker-src': ['self']
   }

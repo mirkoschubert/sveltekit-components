@@ -14,7 +14,7 @@
     if (toc) {
       content.classList.add('has-toc')
     }
-    console.log(content, toc)
+    //console.log(content, toc)
   })
 
   $: console.log('Layout:', layout)

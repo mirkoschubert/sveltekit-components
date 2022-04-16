@@ -8,11 +8,13 @@
     HeaderRight,
     Search,
     ThemeProvider,
-    ThemeToggle
+    ThemeToggle,
+    Plausible
   } from '$lib/components'
   import '$lib/sass/main.sass'
 </script>
 
+<Plausible apiHost="https://plausible.speedynetz.de" domain="sveltekit-components.mirkoschubert.com" />
 <ThemeProvider fromSystem />
 <Header isSticky>
   <HeaderLeft>

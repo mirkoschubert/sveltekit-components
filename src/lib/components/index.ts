@@ -91,6 +91,8 @@ export { default as CarouselSlide }         from './Advanced/Carousel/CarouselSl
 
 export { default as Gallery }               from './Advanced/Gallery'
 
+export { default as Plausible }             from './Advanced/Plausible'
+
 export { default as Player }                from './Advanced/Player'
 export { default as PlayerControls }        from './Advanced/Player/PlayerControls.svelte'
 export { default as PlayerDetails }         from './Advanced/Player/PlayerDetails.svelte'
