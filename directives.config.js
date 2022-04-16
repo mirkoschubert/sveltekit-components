@@ -11,7 +11,8 @@ export const directives = (dev, rootDomain) => {
         'https://*.prismic.io',
         'https://*.googlevideo.com',
         'wss://*.peerjs.com',
-        'ws://*.peerjs.com'
+        'ws://*.peerjs.com',
+        'https://plausible.speedynetz.de'
       ],
     // 'connect-src': ,
     'img-src': [
