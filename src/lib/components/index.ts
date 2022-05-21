@@ -44,6 +44,8 @@ export { default as Column }                from './Layout/Section/Column.svelte
 export { default as Accordion }             from './General/Accordion'
 export { default as AccordionItem }         from './General/Accordion/AccordionItem.svelte'
 
+export { default as Avatar }                from './General/Avatar'
+
 export { default as Button }                from './General/Button'
 export { default as CopyButton }            from './General/Button/CopyButton.svelte'
 
@@ -58,6 +60,8 @@ export { default as DefinitionList }        from './General/DefinitionList'
 export { default as DefinitionListItem }    from './General/DefinitionList/DefinitionListItem.svelte'
 
 export { default as Image }                 from './General/Image'
+
+export { default as Link }                  from './General/Link'
 
 export { default as List }                  from './General/List'
 export { default as ListItem }              from './General/List/ListItem.svelte'

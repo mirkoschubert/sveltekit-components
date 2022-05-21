@@ -8,3 +8,579 @@ html
   position: relative
   flex-grow: 1
   display: flex
+
+/** AspectRatio Component **/
+
+.aspect-ratio
+  position: relative
+
+  &::before
+    width: 1px
+    height: 0
+    margin-left: -1px
+    content: ''
+    float: left
+
+  &::after
+    display: table
+    clear: both
+    content: ''
+
+  &>.inner
+    background-color: $dark3
+    position: absolute
+    top: 0
+    left: 0
+    width: 100% !important
+    height: 100% !important
+    max-width: none !important
+    margin: 0 !important
+
+  &.r1x1
+    aspect-ratio: 1/1
+
+    &::before
+      padding-top: 100%
+
+  &.r4x3
+    aspect-ratio: 4/3
+
+    &::before
+      padding-top: 75%
+
+  &.r3x2
+    aspect-ratio: 3/2
+
+    &::before
+      padding-top: 66.6667%
+
+  &.r16x9
+    aspect-ratio: 16/9
+
+    &::before
+      padding-top: 56.25%
+
+  &.r2x1
+    aspect-ratio: 2/1
+
+    &::before
+      padding-top: 50%
+
+  &.r21x9
+    aspect-ratio: 21/9
+
+    &::before
+      padding-top: 42.857%
+
+  &.r3x4
+    aspect-ratio: 3/4
+
+    &::before
+      padding-top: 133.3333%
+
+  &.r2x3
+    aspect-ratio: 2/3
+
+    &::before
+      padding-top: 150%
+
+  &.r9x16
+    aspect-ratio: 9/16
+
+    &::before
+      padding-top: 177.7778%
+
+  &.r1x2
+    aspect-ratio: 1/2
+
+    &::before
+      padding-top: 200%
+
+  &.r9x21
+    aspect-ratio: 9/21
+
+    &::before
+      padding-top: 233.3333%
+  
+
+/** Content Component **/
+
+.content
+  min-height: calc(100vh - var(--header-size))
+  display: flex
+  flex-direction: column
+  max-width: 100%
+  flex: 1
+  //padding: 4rem 0
+
+  &.centered
+    align-items: center
+    justify-content: center
+
+.btn-menu + .content
+  @include tablet
+    padding-left: 16rem
+
+
+/** ContextMenu Component **/
+/** Drawer Component **/
+
+
+/** Footer Component **/
+
+.footer
+  min-height: var(--footer-size)
+  background-color: #{$gray-1}
+  font-size: .875rem
+  color: var(--text-color-dark)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 2rem
+
+.theme.has-side-nav .footer
+  margin-left: 12rem
+
+
+/** Grid Component **/
+
+.grid
+  display: grid
+  grid-template-columns: 1fr
+  width: 100%
+
+  .grid-item
+    background-color: $dark2
+    grid-column: auto
+    grid-row: auto
+
+    &.row-1
+      grid-row: auto
+
+    &.row-2
+      grid-row: span 2
+
+    &.row-3
+      grid-row: span 3
+    
+    @include tablet
+      &.col-2,
+      &.col-3,
+      &.col-4,
+      &.col-5,
+      &.col-6
+        grid-column: span 2
+
+    @include landscape
+      &.col-3,
+      &.col-4,
+      &.col-5,
+      &.col-6
+        grid-column: span 3
+
+    @include desktop
+      &.col-4
+        grid-column: span 4
+      
+      &.col-5
+        grid-column: span 5
+      
+      &.col-6
+        grid-column: span 6
+
+  @include tablet
+    &.col-2,
+    &.col-3,
+    &.col-4,
+    &.col-5,
+    &.col-6
+      grid-template-columns: repeat(2, 1fr)
+
+  @include landscape
+    &.col-3,
+    &.col-4,
+    &.col-5,
+    &.col-6
+      grid-template-columns: repeat(3, 1fr)
+
+  @include desktop
+    &.col-4
+      grid-template-columns: repeat(4, 1fr)
+
+    &.col-5
+      grid-template-columns: repeat(5, 1fr)
+
+    &.col-6
+      grid-template-columns: repeat(6, 1fr)
+      
+
+/** Header Component **/
+
+.header
+  width: 100%
+  height: var(--header-size)
+  background-color: var(--bg-header)
+  //border-bottom: 1px solid var(--dark-3)
+  display: flex
+  flex-direction: row
+  box-shadow: var(--shadow)
+
+  &.vertical
+    width: var(--header-size)
+    height: 100vh
+    flex-direction: column
+
+  &.sticky
+    position: sticky
+    top: 0
+    left: 0
+    z-index: 1000
+
+  .header-left
+    flex: 1
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+
+  .header-center
+    flex: 1 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 80%
+
+  .header-right
+    flex: 1
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+  .logo
+    flex: 0 1 auto
+    height: 100%
+    min-width: var(--header-size)
+    //border-right: 1px solid var(--dark-3)
+    color: $accent
+
+    a
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &:hover
+        background-color: #{$gray-3}
+
+    .image
+      height: calc(var(--header-size) - 1rem)
+
+      &+.title
+        display: none
+
+    .title
+      font-weight: 600
+
+  .nav
+    display: flex
+    flex: 0 1 auto
+    height: 100%
+
+    a.nav-item
+      display: flex
+      align-items: center
+      height: 100%
+      padding: .5rem
+
+      &:hover
+        background-color: #{$gray-2}
+
+      .icon
+        display: none
+
+
+/** Hero Component **/
+
+.hero
+  position: relative
+  width: 100%
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+  .inner
+    height: 100%
+    background-color: rgba($accent-dark, .5)
+    display: block
+
+  .hero-content
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: $h-spacing 0
+    max-width: $page-width
+    width: calc(100% - 2 * #{$v-spacing})
+    margin: 0 auto
+
+    h1
+      margin: 0
+
+    h2.subheading
+      margin-top: 0
+
+    &.topleft
+      align-items: flex-start
+      justify-content: flex-start
+
+    &.bottomleft
+      align-items: flex-start
+      justify-content: flex-end
+
+    &.topright
+      align-items: flex-end
+      justify-content: flex-start
+
+    &.bottomright
+      align-items: flex-end
+      justify-content: flex-end
+
+    &.topcenter
+      align-items: center
+      justify-content: flex-start
+
+    &.bottomcenter
+      align-items: center
+      justify-content: flex-end
+
+    &.left
+      align-items: flex-start
+      justify-content: center
+
+    &.right
+      align-items: flex-end
+      justify-content: center
+
+    &.center
+      align-items: center
+      justify-content: center
+
+
+/** Logo Component **/
+
+
+/** Menu Component **/
+
+.menu
+  max-height: calc(100% - var(--header-size))
+  background-color: var(--bg-menu)
+  //border: 1px solid #{$gray-4}
+  z-index: 200
+  width: 100%
+  top: var(--header-size)
+  bottom: 0
+  left: 0
+  position: fixed
+  overflow: auto
+  height: 100%
+  padding: 2rem 0
+  align-items: stretch
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  justify-content: flex-start
+
+  @include tablet
+    //background-color: #{$gray-2}
+    padding: 1rem 0
+    width: 16rem
+    display: flex
+
+  .menu-items
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    .menu-section
+      display: flex
+      flex-direction: column
+      gap: .25rem
+      
+      .menu-label
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 1rem
+        margin: 0 .5rem
+
+        .label
+          color: var(--text-dark)
+          padding: .25rem 0 .25rem 1rem
+          //font-size: .875rem
+          text-transform: uppercase
+          line-height: 1.3
+
+      .menu-section-items
+        display: flex
+        flex-direction: column
+        gap: .25rem
+
+        .menu-item
+          &[data-disabled],
+          a
+            border-radius: .25rem
+            font-size: .875rem
+            line-height: 1.25rem
+            margin: 0 .5rem
+            padding: .3125rem 0 .3125rem 2rem
+            display: flex
+            height: 100%
+            color: var(--text)
+
+            &:hover
+              background-color: var(--bg)
+
+          &[data-active] a
+            background-color: var(--bg-card)
+            color: rgba(var(--green-light), .8)
+            border: 1px solid rgba(var(--green-light), .8)
+
+          &[data-disabled]
+            color: var(--text-disabled)
+
+          .tag
+            margin-left: .5rem 
+
+  .btn-close
+    position: absolute
+    right: 1.25rem
+    top: 1.25rem
+    background-color: transparent
+    border: none
+    color: #{$white}
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 2rem
+    height: 2rem
+
+    @include tablet
+      display: none
+
+  &.hidden
+    display: none
+
+    @include tablet
+      display: flex
+
+    & + .btn-menu
+      display: flex
+
+      @include tablet
+        display: none
+
+.btn.btn-menu
+  position: fixed
+  left: 1.25rem
+  bottom: 1.25rem
+  z-index: 200
+  color: #{$white}
+  width: 3rem
+  height: 3rem
+  background-color: $dark3
+  border: none
+  border-radius: 50%
+  //opacity: .8
+  display: none
+  align-items: center
+  justify-content: center
+
+
+/** Pagination Component **/
+/** Search Component **/
+
+.search
+  max-height: $header-size
+  height: auto
+  position: relative
+  width: 100%
+
+  label
+    display: none
+
+  .search-field
+    background-color: $dark2
+    border: 1px solid $dark1
+    border-radius: .25rem
+    color: $light2
+    padding: .625rem 1rem
+    width: 100%
+    font-size: 1rem
+
+    &::placeholder
+      color: $light4
+
+    &:focus-visible
+      outline: 0
+
+  .search-icon
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    background-color: $dark1
+    border: none
+    border-radius: 0 .25rem .25rem 0
+    color: $light3
+    padding: 0 .625rem
+    cursor: pointer
+
+
+/** Section Component **/
+
+.section
+  width: 100%
+  padding: $h-spacing 0
+
+  .inner
+    max-width: $page-width
+    width: calc(100% - (2 * $v-spacing))
+    margin: 0 auto
+
+    &>h1
+      margin-top: 0
+
+  &.centered
+    .inner
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+
+  &.fullwidth
+    padding: 0
+
+    .inner
+      max-width: none
+      width: 100%
+
+  &:not(:last-child)
+    padding-bottom: 0
+
+  .row
+    position: relative
+    display: flex
+    flex-direction: column
+
+    @include landscape
+      flex-direction: row
+
+    .column
+      width: 100% !important
+
+      @include landscape
+        width: initial !important
+

@@ -1,11 +1,12 @@
 <script lang="ts">
-  import { ApertureIcon } from 'svelte-feather-icons'
+  import { ApertureIcon, GithubIcon } from 'svelte-feather-icons'
   import {
     Header,
     HeaderLogo,
     HeaderLeft,
     HeaderCenter,
     HeaderRight,
+    Link,
     Search,
     ThemeProvider,
     ThemeToggle,
@@ -26,6 +27,9 @@
     <Search />
   </HeaderCenter>
   <HeaderRight>
+    <Link type="dark" href="https://github.com/mirkoschubert/sveltekit-components" title="Github SvelteKit Components">
+      <GithubIcon size="24" />
+    </Link>
     <ThemeToggle />
   </HeaderRight>
 </Header>

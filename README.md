@@ -2,6 +2,8 @@
 
 `sveltekit-components` is an opinionated UI kit with dozens of components dedicated to SvelteKit. For more information please visit the [Demo & Documentation](https://sveltekit-components.mirkoschubert.com) App!
 
+<p align="center"><a href="https://www.buymeacoffee.com/musikuss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></p>
+
 **WARNING:** This library is an **early alpha** and under heavy development! Things might break in the future - please use it with care!
 
 ## Installation

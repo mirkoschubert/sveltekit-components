@@ -25,7 +25,6 @@ const menuMap: MenuType = [
       {
         label: 'AspectRatio',
         href: '/docs/layout/aspect-ratio',
-        tag: 'new'
       },
       {
         label: 'Content',
@@ -53,12 +52,10 @@ const menuMap: MenuType = [
       {
         label: 'Header',
         href: '/docs/layout/header',
-        tag: 'updated'
       },
       {
         label: 'Hero',
         href: '/docs/layout/hero',
-        tag: 'new'
       },
       {
         label: 'Logo',
@@ -68,7 +65,6 @@ const menuMap: MenuType = [
       {
         label: 'Menu',
         href: '/docs/layout/menu',
-        tag: 'updated'
       },
       {
         label: 'Pagination',
@@ -84,7 +80,7 @@ const menuMap: MenuType = [
         label: 'Section',
         href: '/docs/layout/section',
       },
-
+ 
     ]
   },
   {
@@ -92,109 +88,106 @@ const menuMap: MenuType = [
     items: [
       {
         label: 'Accordion',
-        href: '/docs/components/accordion',
-        tag: 'new'
+        href: '/docs/general/accordion',
       },
       {
         label: 'Alert',
-        href: '/docs/components/alert',
+        href: '/docs/general/alert',
         disabled: true,
       },
       {
         label: 'Avatar',
-        href: '/docs/components/avatar',
-        disabled: true,
+        href: '/docs/general/avatar',
+        tag: 'new'
       },
       {
         label: 'Badge',
-        href: '/docs/components/badge',
+        href: '/docs/general/badge',
         disabled: true,
       },
       {
         label: 'Button',
-        href: '/docs/components/button',
+        href: '/docs/general/button',
       },
       {
         label: 'Card',
-        href: '/docs/components/card',
+        href: '/docs/general/card',
       },
       {
         label: 'Carousel',
-        href: '/docs/components/carousel',
+        href: '/docs/general/carousel',
         disabled: true
       },
       {
         label: 'CodeSnippet',
-        href: '/docs/components/codesnippet',
-        disabled: true
+        href: '/docs/general/codesnippet',
+        tag: 'new'
       },
       {
         label: 'DefinitionList',
-        href: '/docs/components/definitionlist',
+        href: '/docs/general/definitionlist',
       },
       {
         label: 'Dialog',
-        href: '/docs/components/dialog',
+        href: '/docs/general/dialog',
         disabled: true
       },
       {
         label: 'Image',
-        href: '/docs/components/image',
-        tag: 'new'
+        href: '/docs/general/image',
       },
       {
         label: 'Link',
-        href: '/docs/components/link',
-        disabled: true
-      },
-      {
-        label: 'List',
-        href: '/docs/components/list',
-      },
-      {
-        label: 'Loading',
-        href: '/docs/components/loading',
-      },
-      {
-        label: 'Modal',
-        href: '/docs/components/modal',
+        href: '/docs/general/link',
         tag: 'new'
       },
       {
+        label: 'List',
+        href: '/docs/general/list',
+      },
+      {
+        label: 'Loading',
+        href: '/docs/general/loading',
+      },
+      {
+        label: 'Modal',
+        href: '/docs/general/modal',
+      },
+      {
         label: 'Notification',
-        href: '/docs/components/notification',
+        href: '/docs/general/notification',
       },
       {
         label: 'Popover',
-        href: '/docs/components/popover',
+        href: '/docs/general/popover',
         disabled: true
       },
       {
         label: 'Progress',
-        href: '/docs/components/progress',
+        href: '/docs/general/progress',
         disabled: true
       },
       {
         label: 'Table',
-        href: '/docs/components/table',
+        href: '/docs/general/table',
         disabled: true
       },
       {
         label: 'Tabs',
-        href: '/docs/components/tabs',
+        href: '/docs/general/tabs',
       },
       {
         label: 'Tag',
-        href: '/docs/components/tag',
+        href: '/docs/general/tag',
       },
       {
         label: 'Toast',
-        href: '/docs/components/toast',
+        href: '/docs/general/toast',
         disabled: true
       },
       {
         label: 'Tooltip',
-        href: '/docs/components/tooltip',
+        href: '/docs/general/tooltip',
         disabled: true
       },
     ]
@@ -224,7 +217,7 @@ const menuMap: MenuType = [
       },
       {
         label: 'FileUploader',
-        href: '/docs/advanced/fileuploader',
+        href: '/docs/advanced/file-uploader',
         disabled: true
       },
       {

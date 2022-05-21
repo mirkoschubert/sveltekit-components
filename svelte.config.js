@@ -95,7 +95,7 @@ const config = {
           }
         }
 
-        if (filename.endsWith(".md") && filename.match(/routes\/docs\/(components|layout|forms|advanced)/)) {
+        if (filename.endsWith(".md") && filename.match(/routes\/docs\/(general|layout|forms|advanced)/)) {
           const toc = []
 
           walk(parse(content), {

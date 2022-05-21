@@ -1,0 +1,954 @@
+
+/** Accordion Component **/
+
+.accordion
+  width: 100%
+  list-style: none
+  padding: 0
+
+  &>.item
+    overflow: visible
+    border-top: 1px solid $light5
+    transition: all .3s ease-in
+
+    .heading
+      appearance: none
+      background: none
+      position: relative
+      display: flex
+      width: 100%
+      min-height: 2.5rem
+      flex-direction: row
+      align-items: flex-start
+      justify-content: space-between
+      margin: 0
+      border: 0
+      padding: .625rem 1rem
+      color: $light1
+      transition: all .3s ease-in
+
+      &:hover
+        background-color: $dark3
+
+      svg
+        flex: 0 0 1rem
+        width: 1rem
+        height: 1rem
+        transform: rotate(-270deg)
+        transition: all .3s ease-in
+
+      .title
+        text-align: left
+      
+    .body
+      padding: 1rem
+      display: none
+
+    &.expanding
+      .body
+        animation: .3s ease-in expand-accordion
+
+    &.collapsing
+      .body
+        animation: .3s ease-in collapse-accordion
+
+    &.active
+      .heading
+        svg
+          transform: rotate(-90deg)
+      
+      .body
+        display: block
+
+@keyframes expand-accordion
+  0%
+    height: 0
+    opacity: 0
+    visibility: hidden
+  to
+    height: 100%
+    opacity: 1
+    visibility: inherit
+
+@keyframes collapse-accordion
+  0%
+    height: 100%
+    opacity: 1
+    visibility: inherit
+  to
+    height: 0
+    opacity: 0
+    visibility: hidden
+
+/** Alert Component **/
+
+
+/** Avatar Component **/
+
+.avatar
+  display: inline-flex
+  align-items: center
+  justify-content: flex-start
+  background-color: $dark2
+  width: auto
+  height: 3.5rem
+  border-radius: 2rem
+
+  .avatar-image
+    width: auto
+    height: 100%
+
+    img
+      object-fit: cover
+      object-position: center
+      border-radius: 50%
+      width: 100%
+      height: 100%
+
+  .avatar-content
+    display: none
+    visibility: none
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    margin: 0 1.5rem 0 1rem
+    transition: all .3s ease-in
+
+    .name
+      font-size: 1rem
+      line-height: 1.3
+    
+
+    .description
+      font-size: .875rem
+      font-style: italic
+      line-height: 1.3
+      color: $light4
+
+  &:hover
+    .avatar-content
+      display: flex
+      visibility: visible
+
+  &.permanent
+    .avatar-content
+      display: flex
+      visibility: visible
+
+  &.avatar-sm
+    height: 3rem
+
+    .avatar-content
+      margin: 0 1.25rem 0 .75rem
+
+      .name
+        font-size: .875rem
+
+      .description
+        font-size: .75rem
+
+  &.avatar-lg
+    height: 4.25rem
+
+    .avatar-content
+      margin: 0 1.75rem 0 1.25rem
+
+      .name
+        font-size: 1.125rem
+
+      .description
+        font-size: 1rem
+
+/** Badge Component **/
+
+
+/** Button Component **/
+
+.btn
+  align-items: center
+  border-radius: calc(#{$btn-md-size} * 2)
+  cursor: pointer
+  display: inline-flex
+  font-family: inherit
+  font-size: 1rem
+  text-decoration: none
+  height: #{$btn-md-size}
+  justify-content: flex-start
+  min-width: #{$btn-md-size}
+  padding: .25rem .5rem
+  margin: 0 .5rem .5rem 0
+  transition: all .3s ease-in
+  color: $accent-light
+  background-color: $accent-dark
+  border: 1px solid $accent
+  //box-shadow: var(--shadow)
+
+  &:last-child
+    margin-right: 0
+
+  .icon
+    align-items: center
+    display: flex
+    height: 100%
+    justify-content: center
+    width: #{$btn-md-size}
+
+    &+.title
+      margin-left: 0
+
+  .title
+    margin: 0 .5rem
+
+  &.btn-sm
+    font-size: .875rem
+    height: #{$btn-sm-size}
+
+    .icon
+      width: #{$btn-sm-size}
+
+  &.btn-md
+    height: #{$btn-md-size}
+
+    .icon
+      width: #{$btn-md-size}
+
+  &.btn-lg
+    font-size: 1.125rem
+    height: #{$btn-lg-size}
+
+    .icon
+      width: #{$btn-lg-size}
+
+  &.btn-default
+    color: $accent-light
+    background-color: $accent-dark
+    border: 1px solid $accent
+    
+
+    &:focus,
+    &:hover
+      color: $accent-light
+      background-color: lighten($accent-dark, 3%)
+      border-color: $accent-light
+
+  &.btn-dark
+    color: $accent
+    background-color: $accent-dark
+    border: none
+
+    &:focus,
+    &:hover
+      color: $accent-light
+      background-color: lighten($accent-dark, 3%)
+
+  &.btn-ghost
+    color: $accent
+    background-color: transparent
+    border: none
+    box-shadow: none
+
+    &:focus,
+    &:hover
+      color: $accent
+      background-color: $accent-dark
+      //border: 1px solid $accent
+
+  &.btn-copy
+    background-color: transparent
+    border: none
+    color: $accent
+    display: flex
+    width: 2.5rem
+    height: 2.5rem
+    align-items: center
+    justify-content: center
+    padding: 0
+    margin: 0
+
+    &:hover
+      color: $accent-light
+
+    .copy-feedback
+      background-color: var(--bg-menu)
+      border: 0
+      border-radius: .125rem
+      bottom: -.8125rem
+      box-shadow: var(--shadow)
+      box-sizing: content-box
+      clip: auto
+      color: $accent
+      display: none
+      font-size: .875rem
+      height: auto
+      left: 50%
+      line-height: 1.3
+      margin: auto
+      max-width: 13rem
+      min-width: 1.5rem
+      overflow: visible
+      padding: .1875rem 1rem
+      position: absolute
+      text-align: left
+      transform: translate(-50%,100%)
+      visibility: inherit
+      white-space: nowrap
+      z-index: 6000
+      width: max-content
+
+      &::before
+        position: absolute
+        z-index: 6000
+        width: 0
+        height: 0
+        content: ''
+        border-style: solid
+        border-width: 0 .25rem .3125rem .25rem
+        border-color: transparent transparent var(--bg-menu) transparent
+        top: -0.3125rem
+        left: calc(50% - 0.15625rem)
+
+    &.animating
+      .copy-feedback
+        display: block
+
+      &.fade-in
+        .copy-feedback
+          animation: .5s cubic-bezier(.2,0,.38,.9) show-feedback
+
+      &.fade-out
+        .copy-feedback
+          animation: .5s cubic-bezier(.2,0,.38,.9) hide-feedback
+
+
+@keyframes hide-feedback
+  0%
+    opacity: 1
+    visibility: inherit
+  to
+    opacity: 0
+    visibility: hidden
+
+@keyframes show-feedback
+  0%
+    opacity: 0
+    visibility: hidden
+  to
+    opacity: 1
+    visibility: inherit
+
+
+/** Card Component **/
+
+.card
+  border: 1px solid $dark4
+  border-radius: .25rem
+  background-color: $dark2
+  max-width: 280px
+
+  .image
+    width: 100%
+    position: relative
+    display: inline-block
+    border-radius: .25rem .25rem 0 0
+
+    img
+      width: 100%
+      aspect-ratio: 4 / 3
+      object-fit: cover
+      object-position: center
+      border-radius: .25rem .25rem 0 0
+
+    .overlay
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      border-radius: .25rem .25rem 0 0
+      background-color: rgba($dark5, 40%)
+      transition: all .3s ease-in
+
+    a
+      display: inline-block
+
+      &:hover .overlay
+        background-color: rgba($dark5, 20%)
+
+  .info
+    width: 100%
+    padding: 1rem
+
+    h3
+      margin: 0
+      color: $accent
+
+    h4
+      margin-top: 0
+      margin-bottom: .825em
+
+    .description
+      color: $light3
+      margin-top: .825em
+      margin-bottom: 0
+
+    .list
+      width: 100%
+
+  .buttons
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: stretch
+
+    .btn
+      flex: 1
+      line-height: 1.3
+      hyphens: auto
+      justify-content: center
+      border-radius: 0
+      background-color: $accent-dark
+      color: $accent
+      border-right: 1px solid $dark4
+      border-top: 1px solid $dark4
+      border-left: 0
+      border-bottom: 0
+      margin: 0
+
+      &:hover
+        background-color: lighten($accent-dark, 3%)
+        color: $accent-light
+
+      &:first-child
+        border-bottom-left-radius: .25rem
+      &:last-child
+        border-bottom-right-radius: .25rem
+        border-right: 0
+
+
+/** Carousel Component **/
+
+.carousel
+  width: 100%
+  max-width: var(--page-width)
+  margin: 0 auto
+
+  .header
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: space-between
+    background-color: transparent
+    border: 0
+    margin-bottom: 1rem
+    height: auto
+
+    h2
+      margin: 0
+      line-height: 1.3
+      color: var(--gray-9)
+
+  .splide
+    background-color: none
+    padding: 0
+    width: 100%
+    border-radius: .25rem
+    margin-bottom: 2rem
+
+    .splide__arrow
+      top: 0
+      bottom: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      transform: none
+      background-color: var(--gray-3)
+      width: 3rem
+      opacity: 0
+      transition: all .3s ease-in
+
+      svg
+        fill: var(--white)
+
+      &:hover
+        opacity: .6
+
+    .splide__arrow--prev
+      left: 0
+      border-radius: .25rem 0 0 .25rem
+
+    .splide__arrow--next
+      right: 0
+      border-radius: 0 .25rem .25rem 0
+
+    .splide__pagination
+      bottom: -1.5rem
+      padding: 0
+
+    .splide__pagination__page
+      background-color: var(--gray-5)
+
+    .splide__pagination__page.is-active
+      background-color: var(--gray-6)
+
+    .splide__slide
+      position: relative
+      background-color: var(--gray-3)
+      display: flex
+      align-items: center
+      justify-content: center
+      aspect-ratio: 4 / 3
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat 
+
+      .inner
+        position: relative
+        width: 100%
+        height: 100%
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center
+          border-radius: .25rem
+
+        a
+          display: block
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+          color: var(--gray-9)
+
+        .title
+          position: absolute
+          top: 0
+          left: 0
+          padding: .5rem 1rem
+          width: 100%
+          height: 100%
+          background-color: rgba(var(--overlay), .4)
+          display: flex
+          align-items: center
+          justify-content: center
+          transition: all .3s ease-in
+          text-align: center
+
+          &:hover
+            background-color: rgba(var(--overlay), .2)
+
+
+/** CodeSnippet Component **/
+
+.snippet
+  padding: 1rem
+  width: 100%
+  position: relative
+  display: flex
+  background-color: var(--bg-code)
+  color: var(--text)
+
+  .snippet-container
+    pre
+      cursor: text
+
+    code
+      //font-family
+
+  .btn-copy
+    position: absolute
+    z-index: 10
+    top: .5rem
+    right: .5rem
+    width: 2rem
+    height: 2rem
+
+  &.single
+    padding: 0
+
+    .snippet-container
+      width: 100%
+
+      pre
+        margin: 0 3rem 0 0
+        padding: 1rem
+        overflow-y: auto
+
+    .btn-copy
+      top: calc(50% - 1rem)
+
+
+  &.multi
+    .snippet-container
+      width: 100%
+      min-height: 3rem
+      max-height: 240px
+      position: relative
+      overflow-y: auto
+      order: 1
+
+      pre
+        overflow-x: auto
+        padding-right: 2.5rem
+        padding-bottom: 1.5rem
+        margin: 0
+
+        code
+          overflow: hidden
+
+
+/** DefinitionList Component **/
+/** Dialog Component **/
+
+
+/** Image Component **/
+
+.image
+  margin: 0
+  position: relative
+
+  .aspect-ratio
+    .inner
+      picture
+        display: inline-block
+        width: 100%
+        height: 100%
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+  .caption
+    background-color: rgba($accent-dark, 75%)
+    bottom: 0
+    color: $light3
+    font-size: .875rem
+    padding: 4px 8px
+    position: absolute
+    right: 0
+
+
+/** Link Component **/
+
+.link
+  color: $accent
+  transition: all .3s ease-in
+
+  &:hover
+    color: $accent-light
+
+  &.dark
+    color: $light4
+
+    &:hover
+      color: $light3
+
+
+/** List Component **/
+
+.list
+  width: 100%
+  //padding: 1rem
+
+  dl
+    width: 100%
+
+    dt
+      color: $light3
+      font-size: .875rem
+      text-transform: uppercase
+      line-height: 1.3
+
+    dd
+      color: $light1
+      margin-left: 0
+      margin-bottom: .5rem
+
+
+/** Loading Component **/
+
+
+/** Modal Component **/
+
+.modal
+  position: fixed
+  z-index: 9000
+  top: 0
+  left: 0
+  display: flex
+  width: 100vw
+  height: 100vh
+  align-items: center
+  justify-content: center
+  background-color: rgba($dark0, 90%)
+  opacity: 0
+  transition: all .3s ease-in
+  visibility: hidden
+
+  &.visible
+    opacity: 1
+    visibility: inherit
+
+  .inner
+    position: static
+    width: 85%
+    height: auto
+    max-height: 90%
+    background-color: $accent-dark
+    border: 1px solid $accent
+    border-radius: .25rem
+    min-height: 8rem
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: auto 1fr auto
+    box-shadow: var(--shadow)
+
+    @include desktop
+      width: 50%
+
+    .header
+      border-bottom: 1px solid $accent
+      height: 3rem
+      background-color: transparent
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: .5rem 1rem
+      box-shadow: none
+
+      .title
+        color: $accent-light
+
+    .body
+      padding: 1rem
+      color: $accent
+
+
+/** Notification Component **/
+
+.notification
+  display: flex
+  flex-direction: column
+  min-width: 150px
+  max-width: 250px
+  min-height: 100px
+  background-color: $accent-dark
+  border: 1px solid $accent
+  border-radius: .25rem
+  padding: .5rem
+  position: relative
+  pointer-events: auto
+
+  &.clickable
+    cursor: pointer
+
+  .heading
+    display: flex
+    align-items: center
+    .icon
+      width: 32px
+      height: 32px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $accent-light
+
+    .title
+      margin: 0 0 0 .5rem
+      font-size: 1rem
+      color: $accent-light
+  
+  .description
+    margin-left: 2.5rem
+    color: $accent
+    font-size: .875rem
+    line-height: 1.5
+    margin-bottom: .25rem
+
+  .close
+    background-color: $accent-dark
+    border: 1px solid $accent
+    border-radius: 50%
+    color: $accent-light
+    padding: 0
+    width: 20px
+    height: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: -7px
+    right: -7px
+    cursor: pointer
+    z-index: 2000
+
+    &:hover
+      border-color: $accent-light
+      background-color: lighten($accent-dark, 3%)
+
+.notification-provider
+  position: fixed
+  z-index: 1000
+  top: calc(var(--header-size) + 1rem)
+  left: 1rem
+  bottom: 1rem
+  right: 1rem
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  pointer-events: none
+
+  .area
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    gap: .25rem
+
+  &.top-right
+    justify-content: flex-start
+    align-items: flex-end
+
+  &.top-center
+    justify-content: flex-start
+    align-items: center
+
+  &.top-left
+    justify-content: flex-start
+    align-items: flex-start
+
+  &.bottom-right
+    justify-content: flex-end
+    align-items: flex-end
+
+    .area
+      flex-direction: column-reverse
+
+  &.bottom-center
+    justify-content: flex-end
+    align-items: center
+
+    .area
+      flex-direction: column-reverse
+
+  &.bottom-left
+    justify-content: flex-end
+    align-items: flex-start
+
+    .area
+      flex-direction: column-reverse
+
+
+/** Popover Component **/
+/** Progress Component **/
+/** Table Component **/
+
+
+/** Tabs Component **/
+
+.tabs
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.3
+  position: relative
+  width: 100%
+  height: auto
+  min-height: 3rem
+  color: $light1
+
+  .trigger
+    display: none
+
+  .tabs-nav
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+    max-width: 100%
+    width: auto
+    height: auto
+    position: absolute
+
+    .tabs-nav-item
+      width: 100%
+      padding: 0
+      cursor: pointer
+      display: inline-flex
+      margin-right: .5rem
+
+      a
+        display: inline-block
+        overflow: hidden
+        height: 3rem
+        text-decoration: none
+        text-overflow: ellipsis
+        white-space: nowrap
+        padding: 1rem 1rem .75rem
+        margin: 0
+        color: $light3
+        border-bottom: 2px solid $light4
+        transition: all 150ms ease-in
+
+        &:hover
+          border-color: $light2
+          color: $light1
+
+      &.selected
+        a
+          border-color: $accent
+          color: $white
+
+      &.disabled
+        a
+          color: $light5
+          border-color: $light5
+          cursor: not-allowed
+
+.tab-content
+  width: 100%
+  //background-color: $dark2
+  padding: 2rem 0
+
+  &.hidden
+    display: none
+
+
+/** Tag Component **/
+
+.tag:not(.snippet .tag)
+  display: inline-flex
+  vertical-align: middle
+  align-items: center
+  justify-content: center
+  font-size: .875rem
+  line-height: 1.3
+  border: 1px solid $accent
+  appearance: none
+  background-color: $accent-dark
+  color: $accent-light
+  padding: .25rem 0.5rem
+  margin: .25rem
+  //border-radius: .9375rem
+  border-radius: .25rem
+  min-width: 2rem
+  min-height: 1.5rem
+
+  &.tag-sm
+    font-size: .75rem
+    min-height: auto
+    padding: 0 .3rem
+    border-radius: .125rem
+    color: $accent
+
+  &.tag-dark
+    border: 0
+    color: $accent
+
+
+/** Toast Component **/
+/** Tooltip Component **/
