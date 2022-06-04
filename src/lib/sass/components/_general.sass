@@ -734,8 +734,7 @@
 .notification
   display: flex
   flex-direction: column
-  min-width: 150px
-  max-width: 250px
+  width: 250px
   min-height: 100px
   background-color: $accent-dark
   border: 1px solid $accent
@@ -746,6 +745,10 @@
 
   &.clickable
     cursor: pointer
+
+  .inner
+    width: 100%
+    height: 100%
 
   .heading
     display: flex
@@ -920,7 +923,7 @@
 
 /** Tag Component **/
 
-.tag:not(.snippet .tag)
+span.tag:not(.snippet .tag):not(.token.tag)
   display: inline-flex
   vertical-align: middle
   align-items: center

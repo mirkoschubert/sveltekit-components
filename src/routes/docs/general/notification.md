@@ -5,33 +5,42 @@ components: ['Notification', 'NotificationProvider']
 ---
 
 <script>
-  import { Notify, NotificationProvider, Button, Preview } from '$lib/components'
+  import { notification, Button, Preview } from '$lib/components'
 </script>
 
-Laborum quis proident non quis minim quis nulla nulla sint cillum duis commodo. Velit tempor elit ipsum officia ex voluptate enim. Pariatur cillum Lorem dolore magna fugiat mollit proident mollit pariatur aliquip qui. Cillum mollit anim veniam ullamco commodo ex voluptate in culpa pariatur cupidatat. Consequat do sunt nisi laborum pariatur cupidatat Lorem velit.
+Before you can use the notification feature, you have to set up the `NotificationProvider` in your `_layout.svelte` file:
+
+```html
+<script>
+  import { NotificationProvider } from 'svelte-components'
+</script>
+<NotificationProvider duration={3000} position="bottom-right" />
+```
+
+You can set up the `duration` (in ms) and `position` globally.
 
 ### Default Notification
 
 <Button
   on:click={() => {
-    Notify.show({
+    notification.add({
       title: 'Successfully saved!',
       description: 'This is an example for a notification.',
       type: 'success'
     })
   }}
 >Click me!</Button>
-<NotificationProvider duration={5000} position="top-right" closable={true} />
 
-### Clickable Notification
+### Clickable and Closable Notification
 
 <Button
   on:click={() => {
-    Notify.show({
+    notification.add({
       title: 'NOOb warning!',
       description: "You don't know what you're doing! Click here to see how you can get started.",
       href: '/docs/overview/getting-started',
-      type: 'warning'
+      type: 'warning',
+      closable: true
     })
   }}
 >Click me!</Button>

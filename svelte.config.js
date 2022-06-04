@@ -179,6 +179,7 @@ const config = {
 			template: 'src/app.html',
 			hooks: 'src/hooks'
 		},
+    floc: dev,
     vite: {
 			resolve: {
 				alias: {

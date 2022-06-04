@@ -156,6 +156,7 @@ const menuMap: MenuType = [
       {
         label: 'Notification',
         href: '/docs/general/notification',
+        tag: 'update'
       },
       {
         label: 'Popover',

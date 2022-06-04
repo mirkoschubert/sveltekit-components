@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { FlyParams } from 'svelte/transition'
-  import { Notify } from '$lib/stores/notification'
-  import { Notification, Portal } from '$lib/components'
+  import type { NotificationPositionsType } from '$lib/types'
+  import Notification from './Notification.svelte'
 
-  export let position: 'top-right' | 'top-center' | 'top-left' | 'bottom-right' | 'bottom-center' | 'bottom-left' = 'top-right'
-	export let duration: number = 5000
-	export let closable: boolean = false
-  
+  import notification from '$lib/stores/notification'
+
+  export let duration: number = 5000
+  export let position: NotificationPositionsType = 'top-right'
 
   const getFlyParamsFromPosition = (pos: string): FlyParams => {
     if (pos.endsWith('-right')) return { x: 50 }
@@ -16,19 +16,22 @@
   }
 
   $: flyParams = getFlyParamsFromPosition(position)
-  $: duration && Notify.setDuration(duration)
+  $: position && notification.setPosition(position)
+  $: duration && notification.setDuration(duration)
 </script>
 
-{#if $Notify.items.length !== 0}
-  <Portal>
-    <div class="notification-provider {position}">
-      <div class="area">
-        {#each $Notify.items as item}
-          <slot {item} {closable}>
-            <Notification {item} {closable} flyInParams={flyParams} flyOutParams={flyParams} />
-          </slot>
-        {/each}
-      </div>
+{#if $notification.items.length > 0}  
+  <div
+    class="notification-provider {position}"
+    data-duration={duration}
+    data-position={position}
+  >
+    <div class="area">
+      {#each $notification.items as item}
+        <slot {item}>
+          <Notification {item} flyInParams={flyParams} flyOutParams={flyParams} />
+        </slot>
+      {/each}
     </div>
-  </Portal>
+  </div>
 {/if}

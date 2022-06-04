@@ -19,16 +19,20 @@ export type Action = (
 
 /** Notification */
 
+export type NotificationPositionsType = 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'
+
+export interface NotificationOptionsType {
+  duration?: number
+  position?: NotificationPositionType
+}
+
 export interface NotificationType {
   title?: string
   description?: string
   type?: 'error' | 'success' | 'warning' | 'info'
   href?: string
+  closable?: boolean
   [key: string]: unknown
-}
-
-export interface NotificationOptionsType {
-  duration?: number
 }
 
 /** Menu */

@@ -1,28 +1,32 @@
-import type { NotificationType, NotificationOptionsType } from '$lib/types'
+import type { NotificationType, NotificationOptionsType, NotificationPositionsType } from '$lib/types'
 import { writable } from 'svelte/store'
 
-function createNotificationStore() {
+
+
+const createStore = () => {
   let id = 0
   const { update, subscribe } = writable({
     duration: 5000,
+    position: 'top-right',
     items: []
   })
 
   return {
     subscribe: subscribe,
-    show: (item: NotificationType, options?: NotificationOptionsType) =>
-      update((n) => {
-        id++
-        item.id = id
+    add: (item: NotificationType, options?: NotificationOptionsType) => update((n) => {
+      id++
+      item.id = id
+      if (!item.closable && !item.href) {
         setTimeout(() => {
           update((n) => ({ ...n, items: n.items.filter((i) => i !== item) }))
         }, options?.duration ?? n.duration)
-        return { ...n, items: [item, ...n.items] }
-      }),
+      }
+      return { ...n, items: [item, ...n.items] }
+    }),
     setDuration: (duration: number) => update((n) => ({ ...n, duration })),
-    close: (item: NotificationType) =>
-      update((n) => ({ ...n, items: n.items.filter((i) => i !== item) }))
+    setPosition: (position: NotificationPositionsType) => update((n) => ({ ...n, position })),
+    close: (item: NotificationType) => update((n) => ({ ...n, items: n.items.filter((i) => i !== item) }))
   }
 }
 
-export const Notify = createNotificationStore()
+export default createStore()

@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-components",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An opinionated UI library of SvelteKit components",
   "license": "MIT",
   "scripts": {

@@ -72,7 +72,7 @@ export { default as Modal }                 from './General/Modal'
 
 export { default as Notification }          from './General/Notification'
 export { default as NotificationProvider }  from './General/Notification/NotificationProvider.svelte'
-export { Notify }                           from '../stores/notification'
+export { default as notification }          from '../stores/notification'
 
 export { default as Portal }                from './General/Portal'
 

@@ -41,6 +41,7 @@
     local ? 'local' : undefined,
     'js'
   ].filter(Boolean).join('.')
+  
 </script>
 
 <svelte:head>
