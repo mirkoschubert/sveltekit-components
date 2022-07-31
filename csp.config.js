@@ -1,5 +1,5 @@
 
-export const directives = (dev, rootDomain) => {
+export const csp = (dev, rootDomain) => {
   return {
     'base-uri': ['self'],
     'child-src': ['self'],

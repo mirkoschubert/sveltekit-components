@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte'
   import { Section } from '$lib/components'
   import 'prism-themes/themes/prism-duotone-sea.css'
@@ -17,8 +17,8 @@
     //console.log(content, toc)
   })
 
-  //$: console.log('Layout:', layout)
-  //$: console.log('Components:', components)
+  $: console.log('Layout:', layout)
+  $: console.log('Components:', components)
 </script>
 
 <Section id="component">

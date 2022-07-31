@@ -6,9 +6,8 @@ import { resolve } from 'path'
 import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
 import { parse, walk } from 'svelte/compiler'
-import slug from 'remark-slug'
-import { directives } from './directives.config.js'
-import { plugin, linkify } from './remark.plugins.js'
+import { csp } from './csp.config.js'
+import mdsvexConfig from './mdsvex.config.js'
 //import toc from './toc.preprocess.js'
 
 const rootDomain = process.env["VITE_DOMAIN"] // or your server IP for dev
@@ -32,27 +31,7 @@ const config = {
         ]
       },
     }),
-    /* {
-      markup: ({ filename, content }) => {
-        if (/node_modules/.test(filename) || !filename.endsWith(".svelte"))
-          return;
-        return {
-          code: content.replace(
-            /process.env.VERSION/g,
-            JSON.stringify(pkg.version)
-          ),
-        };
-      },
-    }, */
-    mdsvex({
-      extensions: ['.md', '.svx'],
-      remarkPlugins: [ plugin, slug, linkify ],
-      layout: {
-        overview: 'src/lib/layouts/overview.svelte',
-        component: 'src/lib/layouts/component.svelte',
-        _: 'src/lib/layouts/component.svelte',
-      }
-    }),
+    mdsvex(mdsvexConfig),
     {
       markup({ content, filename }) {
         if (/node_modules/.test(filename)) return null
@@ -169,7 +148,7 @@ const config = {
 		adapter: dev ? adapter() : vercel(),
     csp: {
 			mode: 'auto',
-			directives: directives(dev, rootDomain)
+			directives: csp(dev, rootDomain)
     },
     alias: {
       $lib: resolve('src/lib'),
@@ -190,6 +169,6 @@ const config = {
 			emitTypes: true,
     }
 	}
-};
+}
 
-export default config;
+export default config
