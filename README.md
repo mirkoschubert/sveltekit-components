@@ -61,12 +61,11 @@ A few of the components are using their own stores. For example, if you want to 
 ```js
   <script>
     import { Button } from 'sveltekit-components'
-    import { Notify } from 'sveltekit-components/stores/notification'
   </script>
 
   <Button
     on:click={() => {
-      Notify.show({
+      notification.add({
         title: 'Example',
         description: 'This is an example',
         type: 'success'

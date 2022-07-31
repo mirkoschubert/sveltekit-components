@@ -31,7 +31,7 @@ export const createImports = (source) => {
   const ccs_imports = Array.from(inlineComponents.keys())
   const icon_imports = Array.from(icons.keys())
 
-  console.log(ccs_imports, icon_imports)
+  //console.log(ccs_imports, icon_imports)
 
   if (ccs_imports.length === 0) return ''
 

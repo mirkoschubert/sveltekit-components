@@ -17,8 +17,8 @@
     //console.log(content, toc)
   })
 
-  $: console.log('Layout:', layout)
-  $: console.log('Components:', components)
+  //$: console.log('Layout:', layout)
+  //$: console.log('Components:', components)
 </script>
 
 <Section id="component">

@@ -52,6 +52,7 @@ const menuMap: MenuType = [
       {
         label: 'Header',
         href: '/docs/layout/header',
+        tag: 'update'
       },
       {
         label: 'Hero',
@@ -98,7 +99,6 @@ const menuMap: MenuType = [
       {
         label: 'Avatar',
         href: '/docs/general/avatar',
-        tag: 'new'
       },
       {
         label: 'Badge',
@@ -121,7 +121,6 @@ const menuMap: MenuType = [
       {
         label: 'CodeSnippet',
         href: '/docs/general/codesnippet',
-        tag: 'new'
       },
       {
         label: 'DefinitionList',
@@ -139,7 +138,6 @@ const menuMap: MenuType = [
       {
         label: 'Link',
         href: '/docs/general/link',
-        tag: 'new'
       },
       {
         label: 'List',
@@ -156,7 +154,6 @@ const menuMap: MenuType = [
       {
         label: 'Notification',
         href: '/docs/general/notification',
-        tag: 'update'
       },
       {
         label: 'Popover',
@@ -171,7 +168,7 @@ const menuMap: MenuType = [
       {
         label: 'Table',
         href: '/docs/general/table',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Tabs',

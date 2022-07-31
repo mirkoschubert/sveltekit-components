@@ -17,6 +17,7 @@ export { default as Grid }                  from './Layout/Grid'
 export { default as GridItem }              from './Layout/Grid/GridItem.svelte'
 
 export { default as Header }                from './Layout/Header/Header.svelte'
+export { default as HeaderIcon }            from './Layout/Header/HeaderIcon.svelte'
 export { default as HeaderLeft }            from './Layout/Header/HeaderLeft.svelte'
 export { default as HeaderCenter }          from './Layout/Header/HeaderCenter.svelte'
 export { default as HeaderRight }           from './Layout/Header/HeaderRight.svelte'
@@ -75,6 +76,14 @@ export { default as NotificationProvider }  from './General/Notification/Notific
 export { default as notification }          from '../stores/notification'
 
 export { default as Portal }                from './General/Portal'
+
+export { default as Table }                 from './General/Table'
+export { default as TableBody }             from './General/Table/TableBody.svelte'
+export { default as TableCell }             from './General/Table/TableCell.svelte'
+export { default as TableContainer }        from './General/Table/TableContainer.svelte'
+export { default as TableHead }             from './General/Table/TableHead.svelte'
+export { default as TableHeader }           from './General/Table/TableHeader.svelte'
+export { default as TableRow }              from './General/Table/TableRow.svelte'
 
 export { default as Tabs }                  from './General/Tabs'
 export { default as Tab }                   from './General/Tabs/Tab.svelte'

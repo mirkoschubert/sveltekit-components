@@ -171,6 +171,12 @@ const config = {
 			mode: 'auto',
 			directives: directives(dev, rootDomain)
     },
+    alias: {
+      $lib: resolve('src/lib'),
+      $stores: resolve('./src/lib/stores'),
+      $types: resolve('src/lib/types'),
+      $components: resolve('./src/lib/components')
+    },
     files: {
 			assets: 'static',
 			lib: 'src/lib',
@@ -178,17 +184,6 @@ const config = {
 			serviceWorker: 'src/service-worker',
 			template: 'src/app.html',
 			hooks: 'src/hooks'
-		},
-    floc: dev,
-    vite: {
-			resolve: {
-				alias: {
-          $lib: resolve('src/lib'),
-					$stores: resolve('./src/lib/stores'),
-          $types: resolve('src/lib/types'),
-					$components: resolve('./src/lib/components')
-				}
-			},
 		},
     package: {
       dir: 'package',

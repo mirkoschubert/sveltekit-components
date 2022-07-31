@@ -3,6 +3,7 @@
   import {
     Header,
     HeaderLogo,
+    HeaderIcon,
     HeaderLeft,
     HeaderCenter,
     HeaderRight,
@@ -27,10 +28,13 @@
     <Search />
   </HeaderCenter>
   <HeaderRight>
-    <Link type="dark" href="https://github.com/mirkoschubert/sveltekit-components" title="Github SvelteKit Components">
+    <HeaderIcon
+      type="dark"
+      href="https://github.com/mirkoschubert/sveltekit-components"
+      title="Github SvelteKit Components"
+    >
       <GithubIcon size="24" />
-    </Link>
-    <ThemeToggle />
+    </HeaderIcon>
   </HeaderRight>
 </Header>
 <slot/>
