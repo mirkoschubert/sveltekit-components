@@ -24,6 +24,6 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
 
 ### Avatar Sizes
 
-<Avatar permanent size="sm" name="John Doe" description="Developer" image="https://picsum.photos/seed/picsum/200/200" />
-<Avatar permanent size="md" name="John Doe" description="Developer" image="https://picsum.photos/seed/picsum/200/200" />
-<Avatar permanent size="lg" name="John Doe" description="Developer" image="https://picsum.photos/seed/picsum/200/200" />
+<Avatar size="sm" name="John Doe" description="Developer" image="https://picsum.photos/seed/picsum/200/200" />
+<Avatar size="md" name="John Doe" description="Developer" image="https://picsum.photos/seed/picsum/200/200" />
+<Avatar size="lg" name="John Doe" description="Developer" image="https://picsum.photos/seed/picsum/200/200" />

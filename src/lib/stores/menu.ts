@@ -99,6 +99,7 @@ const menuMap: MenuType = [
       {
         label: 'Avatar',
         href: '/docs/general/avatar',
+        tag: 'update'
       },
       {
         label: 'Badge',

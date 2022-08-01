@@ -86,17 +86,25 @@
 /** Avatar Component **/
 
 .avatar
-  display: inline-flex
-  align-items: center
-  justify-content: flex-start
-  background-color: $dark2
-  width: auto
-  height: 3.5rem
   border-radius: 2rem
+  display: inline-block
+  height: var(--avatar-md-size)
+  margin-right: .5rem
+  overflow: hidden
+  position: relative
+  width: var(--avatar-md-size)
+  transition: width .2s ease-out
+
+  &:hover
+    width: auto
 
   .avatar-image
+    position: absolute
+    top: 0
+    left: 0
     width: auto
     height: 100%
+    z-index: 20
 
     img
       object-fit: cover
@@ -106,21 +114,30 @@
       height: 100%
 
   .avatar-content
-    display: none
-    visibility: none
-    flex-direction: column
     align-items: flex-start
+    background-color: var(--avatar-content-bg)
+    border-radius: 2rem
+    display: flex
+    flex-direction: column
+    height: 100%
     justify-content: center
-    margin: 0 1.5rem 0 1rem
-    transition: all .3s ease-in
+    left: 0
+    opacity: 1
+    position: relative
+    padding-left: calc(var(--avatar-md-size) + .75rem)
+    padding-right: 1.25rem
+    top: 0
+    transform: translateX(-300px)
+    transition: all .2s ease-out
+    z-index: 10
 
     .name
-      font-size: 1rem
+      font-size: .875rem
       line-height: 1.3
     
 
     .description
-      font-size: .875rem
+      font-size: .75rem
       font-style: italic
       line-height: 1.3
       color: $light4
@@ -128,36 +145,49 @@
   &:hover
     .avatar-content
       display: flex
-      visibility: visible
+      transform: translateX(0)
+      opacity: 1
 
   &.permanent
+    width: auto
+
     .avatar-content
-      display: flex
-      visibility: visible
+      transform: translateX(0)
+      opacity: 1
 
   &.avatar-sm
-    height: 3rem
+    height: var(--avatar-sm-size)
+    width: var(--avatar-sm-size)
+
+    &:hover
+      width: auto
 
     .avatar-content
-      margin: 0 1.25rem 0 .75rem
+      padding-left: calc(var(--avatar-sm-size) + .5rem)
+      padding-right: 1rem
 
       .name
-        font-size: .875rem
-
-      .description
         font-size: .75rem
 
+      .description
+        font-size: .6875rem
+
   &.avatar-lg
-    height: 4.25rem
+    height: var(--avatar-lg-size)
+    width: var(--avatar-lg-size)
+
+    &:hover
+      width: auto
 
     .avatar-content
-      margin: 0 1.75rem 0 1.25rem
+      padding-left: calc(var(--avatar-lg-size) + 1rem)
+      padding-right: 1.5rem
 
       .name
-        font-size: 1.125rem
+        font-size: 1rem
 
       .description
-        font-size: 1rem
+        font-size: .875rem
 
 /** Badge Component **/
 

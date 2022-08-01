@@ -6,6 +6,7 @@
 	"display": "standalone",
 	"description": "An opinionated UI Kit for Sveltekit [WIP]",
 	"start_url": "/",
+  "id": "/",
 	"shortcuts": [
 		{
 			"name": "Home",
