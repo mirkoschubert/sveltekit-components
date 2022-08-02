@@ -1,0 +1,6 @@
+export { default as TextInput } from './TextInput.svelte'
+export { default as EmailInput } from './EmailInput.svelte'
+export { default as PhoneInput } from './PhoneInput.svelte'
+export { default as UrlInput } from './UrlInput.svelte'
+export { default as PasswordInput } from './PasswordInput.svelte'
+export { default as default } from './TextInput.svelte'

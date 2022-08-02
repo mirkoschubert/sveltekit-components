@@ -47,6 +47,8 @@ export { default as AccordionItem }         from './General/Accordion/AccordionI
 
 export { default as Avatar }                from './General/Avatar'
 
+export { default as Badge }                from './General/Badge'
+
 export { default as Button }                from './General/Button'
 export { default as CopyButton }            from './General/Button/CopyButton.svelte'
 
@@ -93,6 +95,14 @@ export { default as Tag }                   from './General/Tag'
 
 /** Forms */
 
+export { default as Form }                  from './Forms/Form'
+export { default as FormGroup }             from './Forms/Form/FormGroup.svelte'
+
+export { default as TextInput }             from './Forms/Input'
+export { default as EmailInput }            from './Forms/Input/EmailInput.svelte'
+export { default as PhoneInput }            from './Forms/Input/PhoneInput.svelte'
+export { default as UrlInput }              from './Forms/Input/UrlInput.svelte'
+export { default as PasswordInput }         from './Forms/Input/PasswordInput.svelte'
 
 /** Advanced */
 

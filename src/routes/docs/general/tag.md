@@ -14,9 +14,13 @@ Nulla ea non consequat officia id ex reprehenderit pariatur aliquip commodo ea s
 
 <Tag>SvelteKit</Tag>
 
-### Dark Tag
+### Tag with Link
 
-<Tag type="dark">SvelteKit</Tag>
+<Tag href="https://kit.svelte.dev">SvelteKit</Tag>
+
+### Dark Tag with Link
+
+<Tag type="dark" href="https://kit.svelte.dev">SvelteKit</Tag>
 
 ### Small and Dark Tag
 

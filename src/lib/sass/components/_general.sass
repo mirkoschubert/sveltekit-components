@@ -191,6 +191,30 @@
 
 /** Badge Component **/
 
+span.badge
+  display: inline-flex
+  vertical-align: middle
+  align-items: center
+  justify-content: center
+  font-size: .75rem
+  line-height: 1
+  appearance: none
+  background-color: $accent-dark
+  padding: .375rem
+  color: $accent
+  margin: .25rem
+  border-radius: .5rem
+  min-width: 1rem
+  height: 1rem
+  
+  &.badge-light
+    background-color: $accent
+    color: $gray-1
+
+  &.badge-super
+    position: relative
+    top: -.5rem
+    left: -.5rem
 
 /** Button Component **/
 
@@ -970,6 +994,12 @@ span.tag:not(.snippet .tag):not(.token.tag)
   border-radius: .25rem
   min-width: 2rem
   min-height: 1.5rem
+  
+  a.link
+    color: $accent-light
+
+    &:hover
+      color: $accent
 
   &.tag-sm
     font-size: .75rem
@@ -981,6 +1011,13 @@ span.tag:not(.snippet .tag):not(.token.tag)
   &.tag-dark
     border: 0
     color: $accent
+
+    a.link
+      color: $accent
+
+      &:hover
+        color: $accent-light
+
 
 /** Table Component **/
 

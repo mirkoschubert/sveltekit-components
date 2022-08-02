@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { Link } from '$lib/components'
 
   export let type: 'default' | 'dark' = 'default'
   export let size: 'sm' | 'md' = 'md'
   export let title: string = ''
+  export let href: string = undefined
 </script>
 
 <span
@@ -13,7 +15,11 @@
   aria-label={title}
   {...$$restProps}
 >
-  <slot>
-    {title}
-  </slot>
+  {#if href}
+    <Link {href} {title}>
+      <slot>{title}</slot>
+    </Link>
+  {:else}
+    <slot>{title}</slot>    
+  {/if}
 </span>

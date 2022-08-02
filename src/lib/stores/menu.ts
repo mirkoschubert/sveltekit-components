@@ -104,7 +104,7 @@ const menuMap: MenuType = [
       {
         label: 'Badge',
         href: '/docs/general/badge',
-        disabled: true,
+        tag: 'new'
       },
       {
         label: 'Button',
@@ -178,6 +178,7 @@ const menuMap: MenuType = [
       {
         label: 'Tag',
         href: '/docs/general/tag',
+        tag: 'update'
       },
       {
         label: 'Toast',
@@ -196,77 +197,77 @@ const menuMap: MenuType = [
     items: [
       {
         label: 'Checkbox',
-        href: '/docs/advanced/checkbox',
+        href: '/docs/forms/checkbox',
         disabled: true
       },
       {
         label: 'ComboBox',
-        href: '/docs/advanced/combobox',
+        href: '/docs/forms/combobox',
         disabled: true
       },
       {
         label: 'DatePicker',
-        href: '/docs/advanced/date-picker',
+        href: '/docs/forms/date-picker',
         disabled: true
       },
       {
         label: 'Dropdown',
-        href: '/docs/advanced/dropdown',
+        href: '/docs/forms/dropdown',
         disabled: true
       },
       {
         label: 'FileUploader',
-        href: '/docs/advanced/file-uploader',
+        href: '/docs/forms/file-uploader',
         disabled: true
       },
       {
         label: 'Form (General)',
-        href: '/docs/advanced/form-general',
-        disabled: true
+        href: '/docs/forms/form-general',
+        tag: 'new'
       },
       {
         label: 'MultiSelect',
-        href: '/docs/advanced/multi-select',
+        href: '/docs/forms/multi-select',
         disabled: true
       },
       {
         label: 'RadioButton',
-        href: '/docs/advanced/radio-button',
+        href: '/docs/forms/radio-button',
         disabled: true
       },
       {
         label: 'RadioButtonGroup',
-        href: '/docs/advanced/radio-button-group',
+        href: '/docs/forms/radio-button-group',
         disabled: true
       },
       {
         label: 'Select',
-        href: '/docs/advanced/select',
+        href: '/docs/forms/select',
         disabled: true
       },
       {
         label: 'Slider',
-        href: '/docs/advanced/slider',
+        href: '/docs/forms/slider',
         disabled: true
       },
       {
         label: 'TextArea',
-        href: '/docs/advanced/text-area',
+        href: '/docs/forms/text-area',
         disabled: true
       },
       {
         label: 'TextInput',
-        href: '/docs/advanced/text-input',
-        disabled: true
+        href: '/docs/forms/text-input',
+        tag: 'new'
       },
       {
         label: 'TimePicker',
-        href: '/docs/advanced/time-picker',
+        href: '/docs/forms/time-picker',
         disabled: true
       },
       {
         label: 'Toggle',
-        href: '/docs/advanced/Toggle',
+        href: '/docs/forms/Toggle',
         disabled: true
       },
     ]
