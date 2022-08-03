@@ -31,7 +31,7 @@
     "prism-themes": "^1.9.0",
     "prismjs": "^1.27.0",
     "remark-slug": "^7.0.1",
-    "sass": "^1.54.0",
+    "sass": "^1.54.1",
     "svelte": "^3.44.0",
     "svelte-check": "^2.7.1",
     "svelte-feather-icons": "^4.0.0",

@@ -27,7 +27,7 @@ html
     content: ''
 
   &>.inner
-    background-color: $dark3
+    background-color: var(--gray-4)
     position: absolute
     top: 0
     left: 0
@@ -130,9 +130,9 @@ html
 
 .footer
   min-height: var(--footer-size)
-  background-color: #{$gray-1}
+  background-color: var(--gray-1)
   font-size: .875rem
-  color: var(--text-color-dark)
+  color: var(--gray-9)
   display: flex
   align-items: center
   justify-content: space-between
@@ -150,7 +150,7 @@ html
   width: 100%
 
   .grid-item
-    background-color: $dark2
+    background-color: var(--gray-3)
     grid-column: auto
     grid-row: auto
 
@@ -219,7 +219,7 @@ html
 .header
   width: 100%
   height: var(--header-size)
-  background-color: var(--bg-header)
+  background-color: var(--gray-1)
   //border-bottom: 1px solid var(--dark-3)
   display: flex
   flex-direction: row
@@ -262,7 +262,7 @@ html
     height: 100%
     min-width: var(--header-size)
     //border-right: 1px solid var(--dark-3)
-    color: $accent
+    color: var(--primary)
 
     a
       width: 100%
@@ -272,7 +272,7 @@ html
       justify-content: center
 
       &:hover
-        background-color: #{$gray-3}
+        background-color: var(--gray-3)
 
     .image
       height: calc(var(--header-size) - 1rem)
@@ -295,7 +295,7 @@ html
       padding: .5rem
 
       &:hover
-        background-color: #{$gray-2}
+        background-color: var(--gray-2)
 
       .icon
         display: none
@@ -312,7 +312,7 @@ html
 
   .inner
     height: 100%
-    background-color: rgba($accent-dark, .5)
+    background-color: var(--overlay)
     display: block
 
   .hero-content
@@ -321,9 +321,9 @@ html
     flex-direction: column
     align-items: center
     justify-content: center
-    padding: $h-spacing 0
-    max-width: $page-width
-    width: calc(100% - 2 * #{$v-spacing})
+    padding: var(--h-spacing) 0
+    max-width: var(--page-width)
+    width: calc(100% - 2 * var(--v-spacing))
     margin: 0 auto
 
     h1
@@ -376,8 +376,7 @@ html
 
 .menu
   max-height: calc(100% - var(--header-size))
-  background-color: var(--bg-menu)
-  //border: 1px solid #{$gray-4}
+  background-color: var(--gray-1)
   z-index: 200
   width: 100%
   top: var(--header-size)
@@ -394,7 +393,6 @@ html
   justify-content: flex-start
 
   @include tablet
-    //background-color: #{$gray-2}
     padding: 1rem 0
     width: 16rem
     display: flex
@@ -417,7 +415,7 @@ html
         margin: 0 .5rem
 
         .label
-          color: var(--text-dark)
+          color: var(--gray-9)
           padding: .25rem 0 .25rem 1rem
           //font-size: .875rem
           text-transform: uppercase
@@ -438,18 +436,16 @@ html
             padding: .3125rem 0 .3125rem 2rem
             display: flex
             height: 100%
-            color: var(--text)
+            color: var(--gray-11)
 
             &:hover
-              background-color: var(--bg)
+              background-color: var(--gray-2)
 
           &[data-active] a
-            background-color: var(--bg-card)
-            color: rgba(var(--green-light), .8)
-            border: 1px solid rgba(var(--green-light), .8)
+            background-color: var(--gray-3)
 
           &[data-disabled]
-            color: var(--text-disabled)
+            color: var(--gray-7)
 
           .tag
             margin-left: .5rem 
@@ -460,7 +456,7 @@ html
     top: 1.25rem
     background-color: transparent
     border: none
-    color: #{$white}
+    color: var(--white)
     display: flex
     align-items: center
     justify-content: center
@@ -487,10 +483,10 @@ html
   left: 1.25rem
   bottom: 1.25rem
   z-index: 200
-  color: #{$white}
+  color: var(--white)
   width: 3rem
   height: 3rem
-  background-color: $dark3
+  background-color: var(--gray-4)
   border: none
   border-radius: 50%
   //opacity: .8
@@ -503,7 +499,7 @@ html
 /** Search Component **/
 
 .search
-  max-height: $header-size
+  max-height: var(--header-size)
   height: auto
   position: relative
   width: 100%
@@ -512,16 +508,16 @@ html
     display: none
 
   .search-field
-    background-color: $dark2
-    border: 1px solid $dark1
+    background-color: var(--gray-3)
+    border: 1px solid var(--gray-2)
     border-radius: .25rem
-    color: $light2
+    color: var(--gray-10)
     padding: .625rem 1rem
     width: 100%
     font-size: 1rem
 
     &::placeholder
-      color: $light4
+      color: var(--gray-8)
 
     &:focus-visible
       outline: 0
@@ -531,10 +527,10 @@ html
     right: 0
     top: 0
     height: 100%
-    background-color: $dark1
+    background-color: var(--gray-2)
     border: none
     border-radius: 0 .25rem .25rem 0
-    color: $light3
+    color: var(--gray-9)
     padding: 0 .625rem
     cursor: pointer
 
@@ -543,11 +539,11 @@ html
 
 .section
   width: 100%
-  padding: $h-spacing 0
+  padding: var(--h-spacing) 0
 
   .inner
-    max-width: $page-width
-    width: calc(100% - (2 * $v-spacing))
+    max-width: var(--page-width)
+    width: calc(100% - (2 * var(--v-spacing)))
     margin: 0 auto
 
     &>h1

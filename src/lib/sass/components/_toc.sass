@@ -1,5 +1,5 @@
 .toc
-  background-color: $dark2
+  background-color: var(--gray-3)
   padding: 1rem
 
   h3
@@ -10,10 +10,10 @@
 
   @include desktop
     position: fixed
-    top: $header-size
+    top: var(--header-size)
     width: 16rem
     right: 0
-    height: calc(100vh - $header-size)
+    height: calc(100vh - var(--header-size))
 
 .content.has-toc
   @include desktop

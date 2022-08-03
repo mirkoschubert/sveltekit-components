@@ -1,4 +1,3 @@
-
 /** Accordion Component **/
 
 .accordion
@@ -8,7 +7,7 @@
 
   &>.item
     overflow: visible
-    border-top: 1px solid $light5
+    border-top: 1px solid var(--gray-12)
     transition: all .3s ease-in
 
     .heading
@@ -24,11 +23,11 @@
       margin: 0
       border: 0
       padding: .625rem 1rem
-      color: $light1
+      color: var(--gray-8)
       transition: all .3s ease-in
 
       &:hover
-        background-color: $dark3
+        background-color: var(--gray-4)
 
       svg
         flex: 0 0 1rem
@@ -140,7 +139,7 @@
       font-size: .75rem
       font-style: italic
       line-height: 1.3
-      color: $light4
+      color: var(--gray-11)
 
   &:hover
     .avatar-content
@@ -199,17 +198,17 @@ span.badge
   font-size: .75rem
   line-height: 1
   appearance: none
-  background-color: $accent-dark
+  background-color: var(--primary-dark)
   padding: .375rem
-  color: $accent
+  color: var(--primary)
   margin: .25rem
   border-radius: .5rem
   min-width: 1rem
   height: 1rem
   
   &.badge-light
-    background-color: $accent
-    color: $gray-1
+    background-color: var(--primary)
+    color: var(--gray-1)
 
   &.badge-super
     position: relative
@@ -220,21 +219,21 @@ span.badge
 
 .btn
   align-items: center
-  border-radius: calc(#{$btn-md-size} * 2)
+  border-radius: calc(var(--btn-md-size) * 2)
   cursor: pointer
   display: inline-flex
   font-family: inherit
   font-size: 1rem
   text-decoration: none
-  height: #{$btn-md-size}
+  height: var(--btn-md-size)
   justify-content: flex-start
-  min-width: #{$btn-md-size}
+  min-width: var(--btn-md-size)
   padding: .25rem .5rem
   margin: 0 .5rem .5rem 0
   transition: all .3s ease-in
-  color: $accent-light
-  background-color: $accent-dark
-  border: 1px solid $accent
+  color: var(--primary-light)
+  background-color: var(--primary-dark)
+  border: 1px solid var(--primary)
   //box-shadow: var(--shadow)
 
   &:last-child
@@ -245,7 +244,7 @@ span.badge
     display: flex
     height: 100%
     justify-content: center
-    width: #{$btn-md-size}
+    width: var(--btn-md-size)
 
     &+.title
       margin-left: 0
@@ -255,62 +254,62 @@ span.badge
 
   &.btn-sm
     font-size: .875rem
-    height: #{$btn-sm-size}
+    height: var(--btn-sm-size)
 
     .icon
-      width: #{$btn-sm-size}
+      width: var(--btn-sm-size)
 
   &.btn-md
-    height: #{$btn-md-size}
+    height: var(--btn-md-size)
 
     .icon
-      width: #{$btn-md-size}
+      width: var(--btn-md-size)
 
   &.btn-lg
     font-size: 1.125rem
-    height: #{$btn-lg-size}
+    height: var(--btn-lg-size)
 
     .icon
-      width: #{$btn-lg-size}
+      width: var(--btn-lg-size)
 
   &.btn-default
-    color: $accent-light
-    background-color: $accent-dark
-    border: 1px solid $accent
+    color: var(--primary-light)
+    background-color: var(--primary-dark)
+    border: 1px solid var(--primary)
     
 
     &:focus,
     &:hover
-      color: $accent-light
-      background-color: lighten($accent-dark, 3%)
-      border-color: $accent-light
+      color: var(--primary-light)
+      background-color: var(--primary-dark-hover)
+      border-color: var(--primary-light)
 
   &.btn-dark
-    color: $accent
-    background-color: $accent-dark
+    color: var(--primary)
+    background-color: var(--primary-dark)
     border: none
 
     &:focus,
     &:hover
-      color: $accent-light
-      background-color: lighten($accent-dark, 3%)
+      color: var(--primary-light)
+      background-color: var(--primary-dark-hover)
 
   &.btn-ghost
-    color: $accent
+    color: var(--primary)
     background-color: transparent
     border: none
     box-shadow: none
 
     &:focus,
     &:hover
-      color: $accent
-      background-color: $accent-dark
+      color: var(--primary)
+      background-color: var(--primary-dark)
       //border: 1px solid $accent
 
   &.btn-copy
     background-color: transparent
     border: none
-    color: $accent
+    color: var(--primary)
     display: flex
     width: 2.5rem
     height: 2.5rem
@@ -320,17 +319,17 @@ span.badge
     margin: 0
 
     &:hover
-      color: $accent-light
+      color: var(--primary-light)
 
     .copy-feedback
-      background-color: var(--bg-menu)
+      background-color: var(--gray-1)
       border: 0
       border-radius: .125rem
       bottom: -.8125rem
       box-shadow: var(--shadow)
       box-sizing: content-box
       clip: auto
-      color: $accent
+      color: var(--primary)
       display: none
       font-size: .875rem
       height: auto
@@ -357,7 +356,7 @@ span.badge
         content: ''
         border-style: solid
         border-width: 0 .25rem .3125rem .25rem
-        border-color: transparent transparent var(--bg-menu) transparent
+        border-color: transparent transparent var(--gray-1) transparent
         top: -0.3125rem
         left: calc(50% - 0.15625rem)
 
@@ -394,9 +393,9 @@ span.badge
 /** Card Component **/
 
 .card
-  border: 1px solid $dark4
+  border: 1px solid var(--gray-5)
   border-radius: .25rem
-  background-color: $dark2
+  background-color: var(--gray-3)
   max-width: 280px
 
   .image
@@ -419,14 +418,14 @@ span.badge
       bottom: 0
       right: 0
       border-radius: .25rem .25rem 0 0
-      background-color: rgba($dark5, 40%)
+      background-color: var(--overlay)
       transition: all .3s ease-in
 
     a
       display: inline-block
 
       &:hover .overlay
-        background-color: rgba($dark5, 20%)
+        background-color: var(--overlay-light)
 
   .info
     width: 100%
@@ -434,14 +433,14 @@ span.badge
 
     h3
       margin: 0
-      color: $accent
+      color: var(--primary)
 
     h4
       margin-top: 0
       margin-bottom: .825em
 
     .description
-      color: $light3
+      color: var(--gray-10)
       margin-top: .825em
       margin-bottom: 0
 
@@ -460,17 +459,17 @@ span.badge
       hyphens: auto
       justify-content: center
       border-radius: 0
-      background-color: $accent-dark
-      color: $accent
-      border-right: 1px solid $dark4
-      border-top: 1px solid $dark4
+      background-color: var(--primary-dark)
+      color: var(--primary)
+      border-right: 1px solid var(--gray-5)
+      border-top: 1px solid var(--gray-5)
       border-left: 0
       border-bottom: 0
       margin: 0
 
       &:hover
-        background-color: lighten($accent-dark, 3%)
-        color: $accent-light
+        background-color: var(--primary-dark-hover)
+        color: var(--primary-light)
 
       &:first-child
         border-bottom-left-radius: .25rem
@@ -584,7 +583,7 @@ span.badge
           padding: .5rem 1rem
           width: 100%
           height: 100%
-          background-color: rgba(var(--overlay), .4)
+          background-color: var(--overlay)
           display: flex
           align-items: center
           justify-content: center
@@ -592,7 +591,7 @@ span.badge
           text-align: center
 
           &:hover
-            background-color: rgba(var(--overlay), .2)
+            background-color: var(--overlay-light)
 
 
 /** CodeSnippet Component **/
@@ -602,8 +601,8 @@ span.badge
   width: 100%
   position: relative
   display: flex
-  background-color: var(--bg-code)
-  color: var(--text)
+  background-color: var(--primary-dark)
+  color: var(--gray-11)
 
   .snippet-container
     pre
@@ -678,9 +677,9 @@ span.badge
         object-position: center
 
   .caption
-    background-color: rgba($accent-dark, 75%)
+    background-color: var(--overlay)
     bottom: 0
-    color: $light3
+    color: var(--gray-10)
     font-size: .875rem
     padding: 4px 8px
     position: absolute
@@ -690,17 +689,17 @@ span.badge
 /** Link Component **/
 
 .link
-  color: $accent
+  color: var(--primary)
   transition: all .3s ease-in
 
   &:hover
-    color: $accent-light
+    color: var(--primary-light)
 
   &.dark
-    color: $light4
+    color: var(--gray-8)
 
     &:hover
-      color: $light3
+      color: var(--gray-10)
 
 
 /** List Component **/
@@ -713,13 +712,13 @@ span.badge
     width: 100%
 
     dt
-      color: $light3
+      color: var(--gray-10)
       font-size: .875rem
       text-transform: uppercase
       line-height: 1.3
 
     dd
-      color: $light1
+      color: var(--gray-8)
       margin-left: 0
       margin-bottom: .5rem
 
@@ -739,7 +738,7 @@ span.badge
   height: 100vh
   align-items: center
   justify-content: center
-  background-color: rgba($dark0, 90%)
+  background-color: var(--overlay)
   opacity: 0
   transition: all .3s ease-in
   visibility: hidden
@@ -753,8 +752,8 @@ span.badge
     width: 85%
     height: auto
     max-height: 90%
-    background-color: $accent-dark
-    border: 1px solid $accent
+    background-color: var(--primary-dark)
+    border: 1px solid var(--primary)
     border-radius: .25rem
     min-height: 8rem
     display: grid
@@ -766,7 +765,7 @@ span.badge
       width: 50%
 
     .header
-      border-bottom: 1px solid $accent
+      border-bottom: 1px solid var(--primary)
       height: 3rem
       background-color: transparent
       display: flex
@@ -776,11 +775,11 @@ span.badge
       box-shadow: none
 
       .title
-        color: $accent-light
+        color: var(--primary-light)
 
     .body
       padding: 1rem
-      color: $accent
+      color: var(--primary)
 
 
 /** Notification Component **/
@@ -790,8 +789,8 @@ span.badge
   flex-direction: column
   width: 250px
   min-height: 100px
-  background-color: $accent-dark
-  border: 1px solid $accent
+  background-color: var(--primary-dark)
+  border: 1px solid var(--primary)
   border-radius: .25rem
   padding: .5rem
   position: relative
@@ -813,25 +812,25 @@ span.badge
       display: flex
       align-items: center
       justify-content: center
-      color: $accent-light
+      color: var(--primary-light)
 
     .title
       margin: 0 0 0 .5rem
       font-size: 1rem
-      color: $accent-light
+      color: var(--primary-light)
   
   .description
     margin-left: 2.5rem
-    color: $accent
+    color: var(--primary)
     font-size: .875rem
     line-height: 1.5
     margin-bottom: .25rem
 
   .close
-    background-color: $accent-dark
-    border: 1px solid $accent
+    background-color: var(--primary-dark)
+    border: 1px solid var(--primary)
     border-radius: 50%
-    color: $accent-light
+    color: var(--primary-light)
     padding: 0
     width: 20px
     height: 20px
@@ -845,8 +844,8 @@ span.badge
     z-index: 2000
 
     &:hover
-      border-color: $accent-light
-      background-color: lighten($accent-dark, 3%)
+      border-color: var(--primary-light)
+      background-color: var(--primary-dark-hover)
 
 .notification-provider
   position: fixed
@@ -915,7 +914,7 @@ span.badge
   width: 100%
   height: auto
   min-height: 3rem
-  color: $light1
+  color: var(--gray-8)
 
   .trigger
     display: none
@@ -947,23 +946,23 @@ span.badge
         white-space: nowrap
         padding: 1rem 1rem .75rem
         margin: 0
-        color: $light3
-        border-bottom: 2px solid $light4
+        color: var(--gray-10)
+        border-bottom: 2px solid var(--gray-11)
         transition: all 150ms ease-in
 
         &:hover
-          border-color: $light2
-          color: $light1
+          border-color: var(--gray-9)
+          color: var(--gray-8)
 
       &.selected
         a
-          border-color: $accent
-          color: $white
+          border-color: var(--primary)
+          color: var(--white)
 
       &.disabled
         a
-          color: $light5
-          border-color: $light5
+          color: var(--gray-12)
+          border-color: var(--gray-12)
           cursor: not-allowed
 
 .tab-content
@@ -984,10 +983,10 @@ span.tag:not(.snippet .tag):not(.token.tag)
   justify-content: center
   font-size: .875rem
   line-height: 1.3
-  border: 1px solid $accent
+  border: 1px solid var(--primary)
   appearance: none
-  background-color: $accent-dark
-  color: $accent-light
+  background-color: var(--primary-dark)
+  color: var(--primary-light)
   padding: .25rem 0.5rem
   margin: .25rem
   //border-radius: .9375rem
@@ -996,27 +995,27 @@ span.tag:not(.snippet .tag):not(.token.tag)
   min-height: 1.5rem
   
   a.link
-    color: $accent-light
+    color: var(--primary-light)
 
     &:hover
-      color: $accent
+      color: var(--primary)
 
   &.tag-sm
     font-size: .75rem
     min-height: auto
     padding: 0 .3rem
     border-radius: .125rem
-    color: $accent
+    color: var(--primary)
 
   &.tag-dark
     border: 0
-    color: $accent
+    color: var(--primary)
 
     a.link
-      color: $accent
+      color: var(--primary)
 
       &:hover
-        color: $accent-light
+        color: var(--primary-light)
 
 
 /** Table Component **/
@@ -1031,7 +1030,7 @@ span.tag:not(.snippet .tag):not(.token.tag)
 
     th
       padding: 0 1rem
-      color: $accent-light
+      color: var(--primary-light)
       text-align: left
       vertical-align: middle
       font-weight: 400
@@ -1043,29 +1042,29 @@ span.tag:not(.snippet .tag):not(.token.tag)
 
     td
       padding: 0 1rem
-      color: $light2
+      color: var(--gray-9)
 
     thead
       font-size: .875rem
       font-weight: 500
       line-height: 1.3
-      background-color: $accent-dark
+      background-color: var(--primary-dark)
 
     tbody
       font-size: .875rem
       font-weight: 400
       line-height: 1.3
-      background-color: $dark2
+      background-color: var(--gray-3)
 
       tr
         transition: background-color 70ms cubic-bezier(0,0,.38,.9)
-        border-top: 1px solid $dark4
+        border-top: 1px solid var(--gray-5)
 
         &:hover
-          background-color: $dark3
+          background-color: var(--gray-4)
 
           td
-            color: $light1
+            color: var(--gray-8)
 
 /** Toast Component **/
 /** Tooltip Component **/
