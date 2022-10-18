@@ -37,7 +37,13 @@
       line-height: 1rem
       vertical-align: baseline
 
-    .form-item-description
+      sup
+        font-size: .875rem
+        color: var(--primary)
+        margin-left: .15rem
+
+    .form-item-description,
+    .form-requirement
       font-size: .75rem
       line-height: 1.3
       width: 100%
@@ -45,6 +51,32 @@
       color: var(--gray-8)
       opacity: 1
       z-index: 0
+
+    &.invalid
+      .form-requirement
+        color: var(--error)
+
+      input,
+      input:focus,
+      input:active
+        outline: 2px solid var(--error)
+        outline-offset: -2px
+
+    &.warning
+      .form-requirement
+        color: var(--gray-10)
+
+    &.disabled
+      .form-label
+        color: var(--gray-8)
+
+      input:disabled::placeholder
+        color: var(--gray-8) !important
+
+      .text-input-icon
+        color: var(--gray-8)
+        
+    //&.required
 
   
 /** Checkbox Component **/
@@ -112,6 +144,12 @@
       cursor: default
       display: flex
       align-items: center
+
+      &.invalid
+        color: var(--error)
+
+      &.warning
+        color: var(--warning)
 
     button.text-input-icon
       cursor: pointer

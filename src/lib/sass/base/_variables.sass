@@ -1,24 +1,10 @@
-
-$header-size: 4rem
-$player-size: 6rem
-$footer-size: 3rem
-
-$btn-base-height: 2rem
-$btn-sm-size: 1.5rem
-$btn-md-size: 2rem
-$btn-lg-size: 2.5rem
-
-$page-width: 1280px
-$h-spacing: 4rem
-$v-spacing: 2rem
-
-// Responsiveness
+// TODO: FIX Responsiveness Variables from Theme
 $tablet-width: 720px
 $landscape-width: 960px
 $desktop-width: 1280px
 
 @use '../themes/default'
-@use '../themes/light'
+@use '../themes/default-light'
 @use 'sass:meta'
 
 //@debug meta.module-variables(default)
@@ -28,5 +14,5 @@ $desktop-width: 1280px
     --#{$name}: #{$value}
 
 html[data-theme=light]
-  @each $name, $value in meta.module-variables(light)
+  @each $name, $value in meta.module-variables(default-light)
     --#{$name}: #{$value}

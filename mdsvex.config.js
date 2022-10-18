@@ -6,9 +6,9 @@ const config = defineConfig({
   extensions: ['.md', '.svx'],
   remarkPlugins: [ plugin, slug, linkify ],
   layout: {
+    default: './src/lib/layouts/component.svelte',
     overview: './src/lib/layouts/overview.svelte',
     component: './src/lib/layouts/component.svelte',
-    _: './src/lib/layouts/component.svelte',
   }
 })
 

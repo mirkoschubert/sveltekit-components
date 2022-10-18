@@ -161,14 +161,14 @@ const config = {
 			lib: 'src/lib',
 			routes: 'src/routes',
 			serviceWorker: 'src/service-worker',
-			template: 'src/app.html',
-			hooks: 'src/hooks'
+			appTemplate: 'src/app.html',
+			hooks: { server: 'src/hooks/server', client: 'src/hooks/client' }
 		},
-    package: {
-      dir: 'package',
-			emitTypes: true,
-    }
-	}
+	},
+  package: {
+    dir: 'package',
+    emitTypes: true,
+  }
 }
 
 export default config

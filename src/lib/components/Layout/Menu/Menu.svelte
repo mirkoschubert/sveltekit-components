@@ -3,7 +3,7 @@
   import { MenuIcon, XIcon } from 'svelte-feather-icons'
 </script>
 
-<aside class="menu" class:hidden={!$menu.opened}>
+<aside class="menu" class:menu-hidden={!$menu.opened}>
   <button class="btn btn-close" on:click={() => menu.setOpened(false)}>
     <XIcon size="16"/>
   </button>

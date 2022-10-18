@@ -18,7 +18,6 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
     label="User Name"
     autocomplete="username"
     placeholder="John Doe"
-    description="Please enter your name!"
   />
 </Form>
 
@@ -29,7 +28,6 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
     name="email"
     label="Email"
     placeholder="john@doe.com"
-    description="Please enter your email address!"
   />
 </Form>
 
@@ -40,7 +38,6 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
     name="phone"
     label="Phone"
     placeholder="+49 1234 1234567"
-    description="Please enter your phone number!"
   />
 </Form>
 
@@ -51,7 +48,6 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
     name="url"
     label="Website"
     placeholder="johndoe.com"
-    description="Please enter your web URL!"
   />
 </Form>
 
@@ -62,6 +58,74 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
     name="password"
     label="Password"
     placeholder="123456"
-    description="Please enter a secure password!"
+  />
+</Form>
+
+### Hidden Label
+
+<Form on:submit>
+  <EmailInput
+    hideLabel
+    name="email"
+    label="Email"
+    placeholder="john@doe.com"
+  />
+</Form>
+
+### With Description
+
+<Form on:submit>
+  <EmailInput
+    required
+    name="email"
+    label="Email"
+    placeholder="john@doe.com"
+    description="Please enter your email address!"
+  />
+</Form>
+
+### Required State
+
+<Form on:submit>
+  <EmailInput
+    required
+    name="email"
+    label="Email"
+    placeholder="john@doe.com"
+  />
+</Form>
+
+### Disabled State
+
+<Form on:submit>
+  <EmailInput
+    disabled
+    name="email"
+    label="Email"
+    placeholder="john@doe.com"
+  />
+</Form>
+
+### Invalid State
+
+<Form on:submit>
+  <EmailInput
+    invalid
+    invalidText="You have to enter a working email address!"
+    name="email"
+    label="Email"
+    placeholder="johndoe"
+  />
+</Form>
+
+### Warning State
+
+<Form on:submit>
+  <EmailInput
+    warning
+    warningText="Email addresses of GMX and Gmail aren't allowed."
+    name="email"
+    label="Email"
+    placeholder="johndoe@gmail.com"
   />
 </Form>

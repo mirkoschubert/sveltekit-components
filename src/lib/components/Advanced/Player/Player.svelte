@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/env'
+  import { browser } from '$app/environment'
   import { session } from '$app/stores'
   import { currentSong, currentAlbum, isPlayerLoading, updateTrack, isRepeat, isShuffle, iOS } from '$lib/stores/player'
   

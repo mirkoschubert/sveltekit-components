@@ -11,7 +11,7 @@
 
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { dev } from '$app/env'
+  import { dev } from '$app/environment'
   import { page } from '$app/stores'
   import { plausible } from '$lib/stores/plausible'
 
