@@ -1,11 +1,46 @@
 <script lang="ts">
-  import { Content, Section, Button } from '$lib/components'
+  import {
+    Header,
+    HeaderLogo,
+    HeaderIcon,
+    HeaderLeft,
+    HeaderCenter,
+    HeaderRight,
+    Search,
+    ThemeProvider,
+    Plausible,
+    Content,
+    Section,
+    Button
+  } from '$lib/components'
+  import { ApertureIcon, GithubIcon } from 'svelte-feather-icons'
 </script>
 
 <svelte:head>
   <title>SvelteKit Components by Mirko Schubert</title>
 </svelte:head>
 
+<Plausible apiHost="https://plausible.speedynetz.de" domain="sveltekit-components.mirkoschubert.com" />
+<ThemeProvider fromSystem />
+<Header isSticky>
+  <HeaderLeft>
+    <HeaderLogo>
+      <ApertureIcon size="32" />
+    </HeaderLogo>
+  </HeaderLeft>
+  <HeaderCenter>
+    <Search />
+  </HeaderCenter>
+  <HeaderRight>
+    <HeaderIcon
+      type="dark"
+      href="https://github.com/mirkoschubert/sveltekit-components"
+      title="Github SvelteKit Components"
+    >
+      <GithubIcon size="24" />
+    </HeaderIcon>
+  </HeaderRight>
+</Header>
 <Content centered>
   <Section centered>
     <div class="heading">

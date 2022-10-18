@@ -14,4 +14,4 @@ Eiusmod ad sint et enim consectetur incididunt ea duis dolore duis. Velit sint a
 
 In nisi sint amet sint cillum duis voluptate dolor consequat.
 
-<FileSource src="/framed/Modal/Modal" />
+<FileSource src="/framed/Modal" />

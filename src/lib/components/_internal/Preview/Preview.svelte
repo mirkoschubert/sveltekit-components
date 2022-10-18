@@ -6,6 +6,8 @@
   export let src: string = ''
   export let framed: boolean = false
 
+  $: console.log(src)
+
 </script>
 
 <div class="preview">

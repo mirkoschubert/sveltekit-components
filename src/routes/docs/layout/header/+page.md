@@ -14,4 +14,4 @@ Nisi veniam velit aliquip ullamco do in eiusmod cillum laboris. Adipisicing moll
 
 Ut sunt mollit aute deserunt elit veniam nulla do non ipsum nulla.
 
-<FileSource src="/framed/Header/HeaderWithLogo" />
+<FileSource src="/framed/Header" />

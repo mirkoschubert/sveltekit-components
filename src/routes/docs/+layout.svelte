@@ -1,6 +1,22 @@
 <script lang="ts">
   import { afterNavigate } from '$app/navigation'
-  import { Menu, MenuSection, MenuItem, Content, NotificationProvider } from '$lib/components'
+  import {
+    Header,
+    HeaderLogo,
+    HeaderIcon,
+    HeaderLeft,
+    HeaderCenter,
+    HeaderRight,
+    Search,
+    ThemeProvider,
+    Plausible,
+    Menu,
+    MenuSection,
+    MenuItem,
+    Content,
+    NotificationProvider
+  } from '$lib/components'
+  import { ApertureIcon, GithubIcon } from 'svelte-feather-icons'
   import { menu } from '$lib/stores/menu'
   import '$lib/sass/main.sass'
   
@@ -12,7 +28,28 @@
 
 </script>
 
+<Plausible apiHost="https://plausible.speedynetz.de" domain="sveltekit-components.mirkoschubert.com" />
+<ThemeProvider fromSystem />
 <NotificationProvider />
+<Header isSticky>
+  <HeaderLeft>
+    <HeaderLogo>
+      <ApertureIcon size="32" />
+    </HeaderLogo>
+  </HeaderLeft>
+  <HeaderCenter>
+    <Search />
+  </HeaderCenter>
+  <HeaderRight>
+    <HeaderIcon
+      type="dark"
+      href="https://github.com/mirkoschubert/sveltekit-components"
+      title="Github SvelteKit Components"
+    >
+      <GithubIcon size="24" />
+    </HeaderIcon>
+  </HeaderRight>
+</Header>
 <Menu>
   {#each $menu.map as section}
     <MenuSection label={section.label}>

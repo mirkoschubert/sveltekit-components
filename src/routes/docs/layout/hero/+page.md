@@ -14,4 +14,4 @@ Pariatur officia aliquip exercitation adipisicing tempor id sit. Aute quis Lorem
 
 Minim elit labore aliquip labore nulla reprehenderit culpa quis irure Lorem.
 
-<FileSource src="/framed/Hero/HeroWithImage" />
+<FileSource src="/framed/Hero" />

@@ -77,7 +77,7 @@ export const plugin = () => {
         }
       })
 
-      const sourceCode = readFileSync(join('src/routes', `${src}.svelte`), 'utf-8')
+      const sourceCode = readFileSync(join('src/routes', `${src}/+page.svelte`), 'utf-8')
       const formattedCode = format(sourceCode, { parser: 'svelte' })
       const highlightedCode = Prism.highlight(formattedCode, Prism.languages.svelte, 'svelte')
 

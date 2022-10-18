@@ -32,4 +32,4 @@ Excepteur occaecat est velit veniam eu occaecat culpa. Ut fugiat ad Lorem pariat
 
 Set `selected` to `true` to enable the selected state for an icon-only ghost button.
 
-<FileSource src="/framed/Button/SelectedIconOnlyButton" />
+<FileSource src="/framed/Button" />

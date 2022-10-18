@@ -12,4 +12,4 @@ Irure dolore veniam est velit duis aute ad. Magna duis culpa consequat deserunt 
 
 ### Menu
 
-<FileSource src="/framed/Menu/Menu" />
+<FileSource src="/framed/Menu" />

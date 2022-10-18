@@ -12,4 +12,4 @@ Irure ea ullamco eiusmod qui nulla proident sit esse incididunt laborum dolor. A
 
 ### Tabs
 
-<FileSource src="/framed/Tabs/Tabs" />
+<FileSource src="/framed/Tabs" />
