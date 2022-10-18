@@ -23,7 +23,6 @@
   aria-live="polite"
   {...$$restProps}
   on:click
-  
   on:mouseenter
   on:mouseleave
 >
@@ -35,6 +34,10 @@
         notification.close(item)
       }
     }}
+    on:keydown
+    on:keyup
+    on:keypress
+
   >
     <header class="heading">
       <div class="icon">

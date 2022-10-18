@@ -1,12 +1,12 @@
 {
   "name": "sveltekit-components",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "An opinionated UI library of SvelteKit components",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "package": "svelte-kit package",
+    "package": "svelte-package",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",

@@ -39,6 +39,9 @@
   on:mouseover
   on:mouseenter
   on:mouseleave
+  on:keydown
+  on:keyup
+  on:keypress
 >
   {#if label}
     <label class="form-label" class:hidden={hideLabel} for={name}>{label}{#if required}<sup>*</sup>{/if}</label>
