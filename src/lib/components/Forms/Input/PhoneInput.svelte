@@ -6,7 +6,7 @@
 
 <TextInput type="tel" {...$$restProps}>
   <svelte:fragment slot="input-icon">
-    <div class="text-input-icon">
+    <div class="form-element-icon">
       <PhoneIcon size="16" />
     </div>
   </svelte:fragment>

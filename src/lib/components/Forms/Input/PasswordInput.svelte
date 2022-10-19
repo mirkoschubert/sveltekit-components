@@ -19,7 +19,7 @@
   <svelte:fragment slot="input-icon">
     <button
       type="button"
-      class="text-input-icon"
+      class="form-element-icon"
       on:click='{() => {
         type = type === 'password' ? 'text' : 'password';
       }}'

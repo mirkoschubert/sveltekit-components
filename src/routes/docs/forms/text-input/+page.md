@@ -1,7 +1,7 @@
 ---
 title: TextInput Component
 layout: component
-components: ['Form', 'FormGroup', 'TextInput', 'EmailInput', 'PhoneInput', 'UrlInput', 'PasswordInput']
+components: ['Form', 'TextInput', 'EmailInput', 'PhoneInput', 'UrlInput', 'PasswordInput']
 ---
 
 <script>
@@ -106,18 +106,6 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
   />
 </Form>
 
-### Invalid State
-
-<Form on:submit>
-  <EmailInput
-    invalid
-    invalidText="You have to enter a working email address!"
-    name="email"
-    label="Email"
-    placeholder="johndoe"
-  />
-</Form>
-
 ### Warning State
 
 <Form on:submit>
@@ -127,5 +115,17 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
     name="email"
     label="Email"
     placeholder="johndoe@gmail.com"
+  />
+</Form>
+
+### Invalid State
+
+<Form on:submit>
+  <EmailInput
+    invalid
+    invalidText="You have to enter a working email address!"
+    name="email"
+    label="Email"
+    placeholder="johndoe"
   />
 </Form>

@@ -6,7 +6,7 @@
 
 <TextInput type="url" {...$$restProps}>
   <svelte:fragment slot="input-icon">
-    <div class="text-input-icon">
+    <div class="form-element-icon">
       <LinkIcon size="16" />
     </div>
   </svelte:fragment>

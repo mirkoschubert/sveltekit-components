@@ -2,30 +2,32 @@
   import { AlertCircleIcon, AlertTriangleIcon } from 'svelte-feather-icons'
 
   // Reactive
-  export let ref: HTMLInputElement = undefined
-  export let value: string = ''
-
+  export let ref: HTMLTextAreaElement = undefined
   export let name: string = 'username'
-  export let type: 'text' | 'password' | 'email' | 'tel' | 'url' = 'text'
-  
+
   // Content
+  export let rows: number = 5
+  export let maxLength: number = undefined
   export let hideLabel: boolean = false
   export let label: string = undefined
   export let placeholder: string = undefined
   export let description: string = undefined
-  export let autocomplete: string = undefined
-  export let invalidText: string = ''
   export let warningText: string = ''
-  
+  export let invalidText: string = ''
+
   // States
   export let disabled: boolean = false
   export let required: boolean = false
   export let invalid: boolean = false
   export let warning: boolean = false
-  
+
+  let length: number = 0
+  let value: string
+
+  $: count = value ? value.length : 0
+
 </script>
 
-<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
   class="form-item"
   class:hide-label={hideLabel}
@@ -44,26 +46,18 @@
     <label class="form-label" class:hidden={hideLabel} for={name}>{label}{#if required}<sup>*</sup>{/if}</label>
   {/if}
   <div class="form-element-wrapper">
-    <input 
+    <textarea
       bind:this={ref}
+      bind:value={value}
       id={name}
-      class="form-element input"
-      value={value ?? ''}
+      class="form-element textarea"
+      maxlength={maxLength}
       {name}
       {placeholder}
-      {type}
-      {autocomplete}
-      {required}
+      {rows}
       {disabled}
       {...$$restProps}
-      on:change
-      on:input
-      on:keydown
-      on:keyup
-      on:focus
-      on:blur
-      on:paste
-    />
+    ></textarea>
     {#if invalid}
       <div class="form-element-icon invalid">
         <AlertCircleIcon size="16" />
@@ -72,8 +66,6 @@
       <div class="form-element-icon warning">
         <AlertTriangleIcon size="16" />
       </div>
-    {:else}
-      <slot name="input-icon" />
     {/if}
   </div>
   <div class="form-item-footer">
@@ -85,6 +77,13 @@
     {/if}
     {#if warning}
       <div class="form-requirement warning">{warningText}</div>
+    {/if}
+    {#if maxLength}
+      <div
+        class="form-item-length"
+        class:warning={count >= maxLength * .8 && count < maxLength}
+        class:full={count >= maxLength}
+      >{count}/{maxLength}</div>
     {/if}
   </div>
 </div>

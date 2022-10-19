@@ -6,7 +6,7 @@
 
 <TextInput type="email" {...$$restProps}>
   <svelte:fragment slot="input-icon">
-    <div class="text-input-icon">
+    <div class="form-element-icon">
       <MailIcon size="16" />
     </div>
   </svelte:fragment>

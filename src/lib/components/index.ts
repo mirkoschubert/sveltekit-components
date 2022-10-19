@@ -104,6 +104,8 @@ export { default as PhoneInput }            from './Forms/Input/PhoneInput.svelt
 export { default as UrlInput }              from './Forms/Input/UrlInput.svelte'
 export { default as PasswordInput }         from './Forms/Input/PasswordInput.svelte'
 
+export { default as TextArea }              from './Forms/TextArea'
+
 /** Advanced */
 
 export { default as Album }                 from './Advanced/Album'

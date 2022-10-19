@@ -52,7 +52,6 @@ const menuMap: MenuType = [
       {
         label: 'Header',
         href: '/docs/layout/header',
-        tag: 'update'
       },
       {
         label: 'Hero',
@@ -99,12 +98,10 @@ const menuMap: MenuType = [
       {
         label: 'Avatar',
         href: '/docs/general/avatar',
-        tag: 'update'
       },
       {
         label: 'Badge',
         href: '/docs/general/badge',
-        tag: 'new'
       },
       {
         label: 'Button',
@@ -169,7 +166,6 @@ const menuMap: MenuType = [
       {
         label: 'Table',
         href: '/docs/general/table',
-        tag: 'new'
       },
       {
         label: 'Tabs',
@@ -178,7 +174,6 @@ const menuMap: MenuType = [
       {
         label: 'Tag',
         href: '/docs/general/tag',
-        tag: 'update'
       },
       {
         label: 'Toast',
@@ -223,7 +218,7 @@ const menuMap: MenuType = [
       {
         label: 'Form (General)',
         href: '/docs/forms/form-general',
-        tag: 'new'
+        tag: 'update'
       },
       {
         label: 'MultiSelect',
@@ -253,12 +248,12 @@ const menuMap: MenuType = [
       {
         label: 'TextArea',
         href: '/docs/forms/text-area',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'TextInput',
         href: '/docs/forms/text-input',
-        tag: 'new'
+        tag: 'update'
       },
       {
         label: 'TimePicker',
