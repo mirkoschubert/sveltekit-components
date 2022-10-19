@@ -27,7 +27,7 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
-  class="form-item"
+  class="form-item input"
   class:hide-label={hideLabel}
   class:invalid
   class:warning
@@ -47,7 +47,7 @@
     <input 
       bind:this={ref}
       id={name}
-      class="form-element input"
+      class="form-element"
       value={value ?? ''}
       {name}
       {placeholder}
@@ -56,7 +56,6 @@
       {required}
       {disabled}
       {...$$restProps}
-      on:change
       on:input
       on:keydown
       on:keyup

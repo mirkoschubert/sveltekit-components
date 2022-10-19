@@ -3,13 +3,15 @@
   import { Section } from '$lib/components'
   import 'prism-themes/themes/prism-duotone-sea.css'
 
-  export let title
-  export let layout
-  export let components
+  export let title: string
+  export let layout: string
+  export let components: Array<string>
 
   onMount(() => {
     const content = document.getElementById('content')
     const toc = document.querySelector('.toc')
+
+    console.log(content)
 
     if (toc) {
       content.classList.add('has-toc')

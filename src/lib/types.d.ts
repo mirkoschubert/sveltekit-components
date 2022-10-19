@@ -105,6 +105,15 @@ export interface ThumbnailType {
   placeholder?: string
 }
 
+/** Forms */
+
+export interface RadioButtonType {
+  id: string
+  label: string
+}
+
+export type RadioButtonGroupType = RadioButtonType[]
+
 /** Music (Album, Song & Player) */
 
 export interface URLType {

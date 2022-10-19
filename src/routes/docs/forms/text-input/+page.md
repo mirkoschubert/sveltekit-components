@@ -64,68 +64,67 @@ Velit mollit veniam occaecat nisi deserunt. Adipisicing officia consectetur pari
 ### Hidden Label
 
 <Form on:submit>
-  <EmailInput
+  <TextInput
     hideLabel
-    name="email"
-    label="Email"
-    placeholder="john@doe.com"
+    name="color1"
+    label="Favorite Color"
+    placeholder="Red"
   />
 </Form>
 
 ### With Description
 
 <Form on:submit>
-  <EmailInput
-    required
-    name="email"
-    label="Email"
-    placeholder="john@doe.com"
-    description="Please enter your email address!"
+  <TextInput
+    name="color2"
+    label="Favorite Color"
+    placeholder="Green"
+    description="Choose your favorite color wisely!"
   />
 </Form>
 
 ### Required State
 
 <Form on:submit>
-  <EmailInput
+  <TextInput
     required
-    name="email"
-    label="Email"
-    placeholder="john@doe.com"
+    name="color3"
+    label="Favorite Color"
+    placeholder="Blue"
   />
 </Form>
 
 ### Disabled State
 
 <Form on:submit>
-  <EmailInput
+  <TextInput
     disabled
-    name="email"
-    label="Email"
-    placeholder="john@doe.com"
+    name="color4"
+    label="Favorite Color"
+    placeholder="Red"
   />
 </Form>
 
 ### Warning State
 
 <Form on:submit>
-  <EmailInput
+  <TextInput
     warning
-    warningText="Email addresses of GMX and Gmail aren't allowed."
-    name="email"
-    label="Email"
-    placeholder="johndoe@gmail.com"
+    warningText="Only blue, green and red are allowd."
+    name="color5"
+    label="Favorite Color"
+    placeholder="Pink"
   />
 </Form>
 
 ### Invalid State
 
 <Form on:submit>
-  <EmailInput
+  <TextInput
     invalid
-    invalidText="You have to enter a working email address!"
-    name="email"
-    label="Email"
-    placeholder="johndoe"
+    invalidText="Bluna is not a color!"
+    name="color6"
+    label="Favorite Color"
+    placeholder="Bluna"
   />
 </Form>

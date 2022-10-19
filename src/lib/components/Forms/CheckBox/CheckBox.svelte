@@ -2,34 +2,25 @@
   import { AlertCircleIcon, AlertTriangleIcon } from 'svelte-feather-icons'
 
   // Reactive
-  export let ref: HTMLTextAreaElement = undefined
-  export let name: string = 'username'
-
+  export let ref: HTMLInputElement = undefined
+  
+  export let name: string = 'checkbox'
+  
   // Content
-  export let rows: number = 5
-  export let maxLength: number = undefined
   export let hideLabel: boolean = false
   export let label: string = undefined
-  export let placeholder: string = undefined
-  export let description: string = undefined
-  export let warningText: string = ''
   export let invalidText: string = ''
-
+  export let warningText: string = ''
+  
   // States
   export let disabled: boolean = false
   export let required: boolean = false
   export let invalid: boolean = false
   export let warning: boolean = false
-
-  let length: number = 0
-  let value: string
-
-  $: count = value ? value.length : 0
-
 </script>
 
 <div
-  class="form-item textarea"
+  class="form-item checkbox"
   class:hide-label={hideLabel}
   class:invalid
   class:warning
@@ -42,22 +33,30 @@
   on:keyup
   on:keypress
 >
-  {#if label}
-    <label class="form-label" class:hidden={hideLabel} for={name}>{label}{#if required}<sup>*</sup>{/if}</label>
-  {/if}
   <div class="form-element-wrapper">
-    <textarea
+    <input
       bind:this={ref}
-      bind:value={value}
       id={name}
       class="form-element"
-      maxlength={maxLength}
+      type="checkbox"
       {name}
-      {placeholder}
-      {rows}
+      {required}
       {disabled}
       {...$$restProps}
-    ></textarea>
+      on:input
+      on:keydown
+      on:keyup
+      on:focus
+      on:blur
+      on:paste
+    >
+    {#if label}
+      <label class="form-element-label" class:hidden={hideLabel} for={name}>{label}{#if required}<sup>*</sup>{/if}</label>
+    {:else}
+      <label class="form-element-label" class:hidden={hideLabel} for={name}>
+        <slot />{#if required}<sup>*</sup>{/if}
+      </label>
+    {/if}
     {#if invalid}
       <div class="form-element-icon invalid">
         <AlertCircleIcon size="16" />
@@ -69,21 +68,11 @@
     {/if}
   </div>
   <div class="form-item-footer">
-    {#if !invalid && !warning && description}
-      <div class="form-item-description">{description}</div>
-    {/if}
     {#if invalid}
       <div class="form-requirement invalid">{invalidText}</div>
     {/if}
     {#if warning}
       <div class="form-requirement warning">{warningText}</div>
-    {/if}
-    {#if maxLength}
-      <div
-        class="form-item-length"
-        class:warning={count >= maxLength * .8 && count < maxLength}
-        class:full={count >= maxLength}
-      >{count}/{maxLength}</div>
     {/if}
   </div>
 </div>

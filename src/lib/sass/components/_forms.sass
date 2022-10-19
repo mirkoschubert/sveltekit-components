@@ -128,21 +128,29 @@
       .form-requirement
         color: var(--error)
 
-      .form-element,
-      .form-element:focus,
-      .form-element:active
-        outline: 2px solid var(--error)
-        outline-offset: -2px
+      .form-element-wrapper
+        .form-element
+          padding-right: 2.25rem
+
+        .form-element,
+        .form-element:focus,
+        .form-element:active
+          outline: 2px solid var(--error)
+          outline-offset: -2px
 
     &.warning
       .form-requirement
         color: var(--warning)
 
-      .form-element,
-      .form-element:focus,
-      .form-element:active
-        outline: 2px solid var(--warning)
-        outline-offset: -2px
+      .form-element-wrapper
+        .form-element
+          padding-right: 2.25rem
+
+        .form-element,
+        .form-element:focus,
+        .form-element:active
+          outline: 2px solid var(--warning)
+          outline-offset: -2px
 
     &.disabled
       .form-label
@@ -157,7 +165,167 @@
     //&.required
 
   
-/** Checkbox Component **/
+/** Checkbox & RadioButton Components **/
+
+.form
+  .checkbox,
+  .radio
+    .form-element-wrapper
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      justify-content: flex-start
+
+      .form-element
+        appearance: none
+        position: relative
+        flex: 0 0 auto
+        width: 1rem
+        height: 1rem
+        margin-top: .25rem
+        padding: 0
+        border-radius: .125rem
+        background-color: var(--gray-4)
+
+        &:checked
+          &::after
+            position: absolute
+            top: .25rem
+            left: .25rem
+            content: ''
+            width: .5rem
+            height: .5rem
+            background-color: var(--primary-light)
+
+        &:focus,
+        &:active
+          outline: none
+
+      .form-element-label
+        margin: 0 0 0 .5rem
+        line-height: 1.8
+        font-size: .875rem
+        display: inline-block
+        font-weight: 400
+        vertical-align: baseline
+
+        sup
+          font-size: .875rem
+          color: var(--primary)
+          margin-left: .15rem
+          vertical-align: top
+
+      .form-element-icon
+        max-height: 1.5rem
+
+    .form-item-footer
+      .form-requirement
+        margin-left: 1.5rem
+
+    &.invalid,
+    &.warning
+      .form-element-wrapper
+        .form-element
+          padding-right: 0
+
+        .form-element-label
+          margin-right: 2.25rem
+
+    &.disabled
+      .form-element-label
+        color: var(--gray-8)
+
+  .radio
+    margin-bottom: 0
+
+    .form-element-wrapper
+      .form-element
+        border-radius: 50%
+
+        &:checked
+          &::after
+            border-radius: 50%
+
+  .radio-group
+    margin-bottom: 1rem
+
+    .radio-group-title
+      font-size: .875rem
+      display: inline-block
+      margin-bottom: .5rem
+      font-weight: 400
+      line-height: 1rem
+      vertical-align: baseline
+
+      sup
+        font-size: .875rem
+        color: var(--primary)
+        margin-left: .15rem
+
+    .radio-group-wrapper
+      position: relative
+      display: flex
+      flex-direction: column
+      background-color: var(--gray-2)
+      padding: .5rem 1rem
+      border-radius: .25rem
+
+      .form-element-icon
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
+        max-height: 2.5rem
+        background-color: transparent
+        border: none
+        border-radius: 0 .25rem .25rem 0
+        color: var(--gray-10)
+        padding: 0 .625rem
+        cursor: default
+        display: flex
+        align-items: center
+
+        &.invalid
+          color: var(--error)
+
+        &.warning
+          color: var(--warning)
+
+    .form-item-footer
+      margin-top: .25rem
+      width: 100%
+
+      .form-requirement
+        flex: 0 1 auto
+        font-size: .75rem
+        line-height: 1.3
+        width: 100%
+        color: var(--gray-8)
+        opacity: 1
+        z-index: 0
+
+        &.warning
+          color: var(--warning)
+
+        &.invalid
+          color: var(--error)
+
+    &.horizontal
+      .radio-group-wrapper
+        flex-direction: row
+        align-items: center
+        justify-content: space-evenly
+
+    &.warning
+      .radio-group-wrapper
+        border: 2px solid var(--warning)
+        padding-right: 2.25rem
+
+    &.invalid
+      .radio-group-wrapper
+        border: 2px solid var(--error)
+        padding-right: 2.25rem
+
 /** ComboBox Component **/
 /** DatePicker Component **/
 /** Dropdown Component **/
@@ -170,18 +338,18 @@
 /** TextArea Component **/
 
 .form
-  .form-item
+  .textarea
     .form-element-wrapper
-      .textarea
-        line-height: 1.7
+      .form-element
+        line-height: 1.8
         padding: .825rem 1rem
 
 /** TextInput Component **/
 
 .form
-  .form-item
+  .input
     .form-element-wrapper
-      .input
+      .form-element
         height: 2.5rem
 
         &[type=email],

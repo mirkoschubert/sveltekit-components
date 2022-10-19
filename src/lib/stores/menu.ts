@@ -193,7 +193,7 @@ const menuMap: MenuType = [
       {
         label: 'Checkbox',
         href: '/docs/forms/checkbox',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'ComboBox',
@@ -228,12 +228,7 @@ const menuMap: MenuType = [
       {
         label: 'RadioButton',
         href: '/docs/forms/radio-button',
-        disabled: true
-      },
-      {
-        label: 'RadioButtonGroup',
-        href: '/docs/forms/radio-button-group',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'Select',
