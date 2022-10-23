@@ -193,7 +193,6 @@ const menuMap: MenuType = [
       {
         label: 'Checkbox',
         href: '/docs/forms/checkbox',
-        tag: 'new'
       },
       {
         label: 'ComboBox',
@@ -208,7 +207,7 @@ const menuMap: MenuType = [
       {
         label: 'Dropdown',
         href: '/docs/forms/dropdown',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'FileUploader',
@@ -218,7 +217,6 @@ const menuMap: MenuType = [
       {
         label: 'Form (General)',
         href: '/docs/forms/form-general',
-        tag: 'update'
       },
       {
         label: 'MultiSelect',
@@ -228,7 +226,6 @@ const menuMap: MenuType = [
       {
         label: 'RadioButton',
         href: '/docs/forms/radio-button',
-        tag: 'new'
       },
       {
         label: 'Select',
@@ -243,12 +240,10 @@ const menuMap: MenuType = [
       {
         label: 'TextArea',
         href: '/docs/forms/text-area',
-        tag: 'new'
       },
       {
         label: 'TextInput',
         href: '/docs/forms/text-input',
-        tag: 'update'
       },
       {
         label: 'TimePicker',
@@ -257,8 +252,8 @@ const menuMap: MenuType = [
       },
       {
         label: 'Toggle',
-        href: '/docs/forms/Toggle',
-        disabled: true
+        href: '/docs/forms/toggle',
+        tag: 'new'
       },
     ]
   },

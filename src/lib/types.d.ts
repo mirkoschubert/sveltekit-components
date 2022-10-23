@@ -114,6 +114,14 @@ export interface RadioButtonType {
 
 export type RadioButtonGroupType = RadioButtonType[]
 
+export interface DropdownItem {
+  id: string
+  text: string
+  disabled?: boolean
+}
+
+export type DropdownItems = DropdownItem[]
+
 /** Music (Album, Song & Player) */
 
 export interface URLType {

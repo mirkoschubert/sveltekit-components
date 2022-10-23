@@ -108,8 +108,12 @@ export { default as TextArea }              from './Forms/TextArea'
 
 export { default as CheckBox }              from './Forms/CheckBox'
 
+export { default as Dropdown }              from './Forms/Dropdown'
+
 export { default as RadioButton }           from './Forms/RadioButton'
 export { default as RadioButtonGroup }      from './Forms/RadioButton/RadioButtonGroup.svelte'
+
+export { default as Toggle }                from './Forms/Toggle'
 
 /** Advanced */
 
