@@ -108,6 +108,8 @@ export { default as TextArea }              from './Forms/TextArea'
 
 export { default as CheckBox }              from './Forms/CheckBox'
 
+export { default as ComboBox }              from './Forms/ComboBox'
+
 export { default as Dropdown }              from './Forms/Dropdown'
 
 export { default as RadioButton }           from './Forms/RadioButton'

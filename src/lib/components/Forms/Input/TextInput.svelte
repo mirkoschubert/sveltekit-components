@@ -63,17 +63,19 @@
       on:blur
       on:paste
     />
-    {#if invalid}
-      <div class="form-element-icon invalid">
-        <AlertCircleIcon size="16" />
-      </div>
-    {:else if warning}
-      <div class="form-element-icon warning">
-        <AlertTriangleIcon size="16" />
-      </div>
-    {:else}
-      <slot name="input-icon" />
-    {/if}
+    <div class="form-element-icons">
+      {#if invalid}
+        <div class="form-element-icon invalid">
+          <AlertCircleIcon size="16" />
+        </div>
+      {:else if warning}
+        <div class="form-element-icon warning">
+          <AlertTriangleIcon size="16" />
+        </div>
+      {:else}
+        <slot name="input-icon" />
+      {/if}
+    </div>
   </div>
   <div class="form-item-footer">
     {#if !invalid && !warning && description}

@@ -71,26 +71,25 @@
 /> -->
 
 <div
-class="form-item dropdown"
-class:hide-label={hideLabel}
-class:inline
-class:invalid
-class:warning
-class:disabled
-class:required
-data-invalid={invalid || undefined}
-aria-invalid={invalid || undefined}
-on:click
-on:keydown
-on:keyup
-on:keypress
+  class="form-item dropdown"
+  class:hide-label={hideLabel}
+  class:inline
+  class:invalid
+  class:warning
+  class:disabled
+  class:required
+  data-invalid={invalid || undefined}
+  aria-invalid={invalid || undefined}
+  on:click
+  on:keydown
+  on:keyup
+  on:keypress
 >
   <div class="form-element-wrapper">
     {#if label}
       <label class="form-label" class:hidden={hideLabel} for={name}>{label}{#if required}<sup>*</sup>{/if}</label>
     {/if}
     <div class="dropdown-wrapper">
-
       <button
         bind:this={ref}
         type="button"
@@ -98,6 +97,7 @@ on:keypress
         id={name}
         tabindex="0"
         aria-expanded="{open}"
+        {disabled}
         on:click={() => {
           if (disabled) return
           open = !open
@@ -128,22 +128,23 @@ on:keypress
             open = false
           }
         }}
-        {disabled}
       >
         <span class="dropdown-label">
           {#if selectedItem}{itemToString(selectedItem)}{:else}<span class="not-selected">Select</span>{/if}
         </span>
-        {#if invalid}
-          <div class="form-element-icon invalid">
-            <AlertCircleIcon size="16" />
+        <div class="form-element-icons">
+          {#if invalid}
+            <div class="form-element-icon invalid">
+              <AlertCircleIcon size="16" />
+            </div>
+          {:else if warning}
+            <div class="form-element-icon warning">
+              <AlertTriangleIcon size="16" />
+            </div>
+          {/if}
+          <div class="form-element-icon open-icon" class:open>
+            <ChevronDownIcon size="16" />
           </div>
-        {:else if warning}
-          <div class="form-element-icon warning">
-            <AlertTriangleIcon size="16" />
-          </div>
-        {/if}
-        <div class="dropdown-list-icon" class:open>
-          <ChevronDownIcon size="16" />
         </div>
       </button>
       {#if open}      

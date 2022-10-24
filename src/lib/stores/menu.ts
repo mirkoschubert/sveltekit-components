@@ -197,7 +197,7 @@ const menuMap: MenuType = [
       {
         label: 'ComboBox',
         href: '/docs/forms/combobox',
-        disabled: true
+        tag: 'new'
       },
       {
         label: 'DatePicker',

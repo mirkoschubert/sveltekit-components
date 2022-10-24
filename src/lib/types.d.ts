@@ -118,6 +118,7 @@ export interface DropdownItem {
   id: string
   text: string
   disabled?: boolean
+  [key: string]: unknown
 }
 
 export type DropdownItems = DropdownItem[]
