@@ -106,6 +106,7 @@ const menuMap: MenuType = [
       {
         label: 'Button',
         href: '/docs/general/button',
+        tag: 'update'
       },
       {
         label: 'Card',
